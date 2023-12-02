@@ -152,8 +152,8 @@
   after = 'make-post-header'
 
   selector = ["#page-title", "h1"]
-  default = "Sample site"
-  append = " &mdash; Sample site"
+  default = "2-ng blog"
+  append = " &mdash; 2-ng"
 
 # Inserts the contents of templates/header.html right before the <main> element
 # There's a variety of actions, including prepend_child and replace_content

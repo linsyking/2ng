@@ -8,8 +8,8 @@
   --Pre-border: #aaa;
   --Main-color: #333;
   --Code-color: #1a8a66; /* teal */
-  --Accent1-color: #e31e24; /* red */
-  --Accent2-color: #d65906; /* orange */
+  --Accent1-color: #1e7de3; /* red */
+  --Accent2-color: #4dbeff; /* orange */
   --Selection-bg: #e31e24;
   --Selection-color: #fff;
   /* from KWrite */
@@ -90,7 +90,7 @@ body {
 /** Structural blocks */
 
 body {
-  max-width: 88rem;
+  max-width: 90rem;
 
   padding: 1rem 2rem 2rem;
 
@@ -432,4 +432,8 @@ pre code {
 }
 .custom-block.details summary:hover {
   color: #11A8CD;
+}
+
+.header-text code{
+  background-color: var(--Pre-bg);
 }
