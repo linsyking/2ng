@@ -416,7 +416,8 @@ pre code {
   border-radius: 2px;
   margin: 1em 0;
   padding: 1.6em;
-  background-color: #f2ecec;
+  background-color: var(--Pre-bg);
+  color: var(--Pre-color);
 }
 .custom-block.details p {
   margin: 0.8rem 0;

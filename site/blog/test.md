@@ -42,7 +42,7 @@ HI
 Multiline
 :::
 
-:::success d
+:::success Success
 Hi
 :::
 
