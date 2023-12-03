@@ -1,7 +1,6 @@
 ---
-title: 神林家杀人事件
+title: 神林家殺人事件
 date: 2023-10-17 15:29:47
-permalink: /pages/6c2611/
 categories:
   - novel
 tags:
