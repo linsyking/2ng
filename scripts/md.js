@@ -1,5 +1,6 @@
 var math = require('markdown-it-mathjax3');
 var container = require('markdown-it-container');
+var emoji = require('markdown-it-emoji');
 var mdit = require('markdown-it'), md = new mdit({
     typographer: true,
     linkify: true,
@@ -113,13 +114,14 @@ var mdit = require('markdown-it'), md = new mdit({
             return '</div>\n';
         }
     }
-});
+}).use(emoji);
 
 var fs = require("fs");
-const { argv } = require('process');
 
 // Read file arg[2] to string
-var input = fs.readFileSync(argv[2]);
+// const { argv } = require('process');
+// var input = fs.readFileSync(argv[2]);
+var input = fs.readFileSync(0);
 
 var res = md.render(input.toString());
 

@@ -2,11 +2,12 @@
 
 Hi, I'm Linsy (he/him), a person with many interests. I like computer science, maths, playing video games and reading novels. Have a look at the [About page](/about) if you want to know more about *me*.
 
+This is a blog for sharing fun stuffs, reviews of books & games.
+
 :::tip Tip
 I recommend people who want to chat with me to take a look at my tastes on those areas.
 :::
 
-This is a blog for sharing fun stuffs, reviews of books & games.
 
 <h2 id="latest-entries-header">Latest posts</h2>
 

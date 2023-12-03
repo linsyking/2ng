@@ -11,6 +11,9 @@ dependencies:
   markdown-it-container:
     specifier: ^3.0.0
     version: registry.npmmirror.com/markdown-it-container@3.0.0
+  markdown-it-emoji:
+    specifier: ^2.0.2
+    version: registry.npmmirror.com/markdown-it-emoji@2.0.2
   markdown-it-mathjax3:
     specifier: ^4.3.2
     version: registry.npmmirror.com/markdown-it-mathjax3@4.3.2
@@ -217,6 +220,12 @@ packages:
     resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/markdown-it-container/-/markdown-it-container-3.0.0.tgz}
     name: markdown-it-container
     version: 3.0.0
+    dev: false
+
+  registry.npmmirror.com/markdown-it-emoji@2.0.2:
+    resolution: {integrity: sha512-zLftSaNrKuYl0kR5zm4gxXjHaOI3FAOEaloKmRA5hijmJZvSjmxcokOLlzycb/HXlUFWzXqpIEoyEMCE4i9MvQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/markdown-it-emoji/-/markdown-it-emoji-2.0.2.tgz}
+    name: markdown-it-emoji
+    version: 2.0.2
     dev: false
 
   registry.npmmirror.com/markdown-it-mathjax3@4.3.2:

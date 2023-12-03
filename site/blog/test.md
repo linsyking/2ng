@@ -1,12 +1,11 @@
-<post-metadata>
-  <post-title>My first post</post-title>
-  <post-date>2023-01-01</post-date>
-  <post-tags>test, post</post-tags>
-</post-metadata>
+---
+title: Functionality test
+date: 2023-12-02
+tags:
+  - blog
+---
 
-This is the first post. Its first paragraph is displayed on the main page as an excerpt.
-
-Other paragraphs could contain some interesting information. Unfortunately, they don't.
+This is a page to test.
 
 ## $\LaTeX$ Tests
 
@@ -34,17 +33,13 @@ int main(){
 ## Container
 
 ::: details Trick
-wtf
+Secret
 :::
 
-s
-
 :::info Info
-HIHI
+HI
 
-asd
-
-fsdfd
+Multiline
 :::
 
 :::success d

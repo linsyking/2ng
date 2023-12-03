@@ -12,6 +12,7 @@
   "dependencies": {
     "markdown-it": "^13.0.2",
     "markdown-it-container": "^3.0.0",
+    "markdown-it-emoji": "^2.0.2",
     "markdown-it-mathjax3": "^4.3.2"
   }
 }

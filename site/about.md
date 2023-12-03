@@ -2,7 +2,7 @@
 
 # About
 
-## Me(..)
+## Me
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/No_image.JPG" style="width: 20%"></img>
 
@@ -77,7 +77,7 @@ I am a big fan of mystery novels.
 - play mobile games
 - `todo!()`
 
-## Blog(..)
+## Blog
 
 This blog is migrated from my old blog built with Vue, Vuepress and [vdoing](https://github.com/xugaoyi/vuepress-theme-vdoing).
 

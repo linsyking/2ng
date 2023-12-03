@@ -321,8 +321,9 @@ pre code {
 }
 
 .center-container {
-    text-align: center;
-  }  
+  display: flex;
+  justify-content: center;
+}
 
 .custom-block .custom-block-title {
   font-weight: 600;
@@ -431,9 +432,17 @@ pre code {
   cursor: pointer;
 }
 .custom-block.details summary:hover {
-  color: #11A8CD;
+  color: #11a8cd;
 }
 
-.header-text code{
+.header-text code {
+  background-color: var(--Pre-bg);
+}
+
+blockquote{
+  border-left: 0.5rem solid var(--Accent2-color);
+  padding: 1px;
+  padding-left: 1rem;
+  margin-left: 0;
   background-color: var(--Pre-bg);
 }
