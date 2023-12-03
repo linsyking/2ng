@@ -8,14 +8,15 @@ var mdit = require('markdown-it'), md = new mdit({
 }).use(math).use(container, 'details', {
 
     validate: function (params) {
-        return params.trim().match(/^details\s+(.*)$/);
+        return params.trim().match(/^details\s*(.*)$/);
     },
 
     render: function (tokens, idx) {
-        var m = tokens[idx].info.trim().match(/^details\s+(.*)$/);
+        var m = tokens[idx].info.trim().match(/^details\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            return '<details class="custom-block details"><summary>' + md.utils.escapeHtml(m[1]) + '</summary>\n';
+            let ins = m[1]?md.utils.escapeHtml(m[1]):"Details";
+            return '<details class="custom-block details"><summary>' + ins + '</summary>\n';
 
         } else {
             return '</details>\n';
@@ -37,14 +38,15 @@ var mdit = require('markdown-it'), md = new mdit({
 }).use(container, 'info', {
 
     validate: function (params) {
-        return params.trim().match(/^info\s+(.*)$/);
+        return params.trim().match(/^info\s*(.*)$/);
     },
 
     render: function (tokens, idx) {
-        var m = tokens[idx].info.trim().match(/^info\s+(.*)$/);
+        var m = tokens[idx].info.trim().match(/^info\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            return '<div class="custom-block info"><p class="title">'+ md.utils.escapeHtml(m[1]) + '</p>\n';
+            let ins = m[1]?md.utils.escapeHtml(m[1]):"Info";
+            return '<div class="custom-block info"><p class="title">' + ins + '</p>\n';
 
         } else {
             return '</div>\n';
@@ -53,14 +55,15 @@ var mdit = require('markdown-it'), md = new mdit({
 }).use(container, 'success', {
 
     validate: function (params) {
-        return params.trim().match(/^success\s+(.*)$/);
+        return params.trim().match(/^success\s*(.*)$/);
     },
 
     render: function (tokens, idx) {
-        var m = tokens[idx].info.trim().match(/^success\s+(.*)$/);
+        var m = tokens[idx].info.trim().match(/^success\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            return '<div class="custom-block success"><p class="title">'+ md.utils.escapeHtml(m[1]) + '</p>\n';
+            let ins = m[1]?md.utils.escapeHtml(m[1]):"Success";
+            return '<div class="custom-block success"><p class="title">' + ins + '</p>\n';
 
         } else {
             return '</div>\n';
@@ -69,14 +72,15 @@ var mdit = require('markdown-it'), md = new mdit({
 }).use(container, 'tip', {
 
     validate: function (params) {
-        return params.trim().match(/^tip\s+(.*)$/);
+        return params.trim().match(/^tip\s*(.*)$/);
     },
 
     render: function (tokens, idx) {
-        var m = tokens[idx].info.trim().match(/^tip\s+(.*)$/);
+        var m = tokens[idx].info.trim().match(/^tip\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            return '<div class="custom-block tip"><p class="custom-block-title">'+ md.utils.escapeHtml(m[1]) + '</p>\n';
+            let ins = m[1]?md.utils.escapeHtml(m[1]):"Tip";
+            return '<div class="custom-block tip"><p class="custom-block-title">' + ins + '</p>\n';
 
         } else {
             return '</div>\n';
@@ -85,14 +89,15 @@ var mdit = require('markdown-it'), md = new mdit({
 }).use(container, 'warning', {
 
     validate: function (params) {
-        return params.trim().match(/^warning\s+(.*)$/);
+        return params.trim().match(/^warning\s*(.*)$/);
     },
 
     render: function (tokens, idx) {
-        var m = tokens[idx].info.trim().match(/^warning\s+(.*)$/);
+        var m = tokens[idx].info.trim().match(/^warning\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            return '<div class="custom-block warning"><p class="custom-block-title">'+ md.utils.escapeHtml(m[1]) + '</p>\n';
+            let ins = m[1]?md.utils.escapeHtml(m[1]):"Warning";
+            return '<div class="custom-block warning"><p class="custom-block-title">' + ins + '</p>\n';
 
         } else {
             return '</div>\n';
@@ -101,14 +106,15 @@ var mdit = require('markdown-it'), md = new mdit({
 }).use(container, 'danger', {
 
     validate: function (params) {
-        return params.trim().match(/^danger\s+(.*)$/);
+        return params.trim().match(/^danger\s*(.*)$/);
     },
 
     render: function (tokens, idx) {
-        var m = tokens[idx].info.trim().match(/^danger\s+(.*)$/);
+        var m = tokens[idx].info.trim().match(/^danger\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            return '<div class="custom-block danger"><p class="custom-block-title">'+ md.utils.escapeHtml(m[1]) + '</p>\n';
+            let ins = m[1]?md.utils.escapeHtml(m[1]):"Danger";
+            return '<div class="custom-block danger"><p class="custom-block-title">' + ins + '</p>\n';
 
         } else {
             return '</div>\n';

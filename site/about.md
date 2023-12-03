@@ -4,7 +4,9 @@
 
 ## Me
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/No_image.JPG" style="width: 20%"></img>
+:::center
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/No_image.JPG" style="width: 20rem"></img>
+:::
 
 I have many internet identities, but "Linsy" is the commonest one I used.
 

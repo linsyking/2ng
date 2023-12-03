@@ -114,7 +114,6 @@
     </div>
     {% endif %}
     <div><strong>Reading time:</strong> {{e.reading_time}}</div>
-    <p>{{e.excerpt}}</p>
     <a href="{{e.url}}">Read more</a>
     {% endfor %}
   """
