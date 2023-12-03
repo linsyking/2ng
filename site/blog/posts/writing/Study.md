@@ -1,5 +1,5 @@
 ---
-title: Study
+title: Study in SJTU
 date: 2023-04-11 20:16:18
 tags:
   - reviews
