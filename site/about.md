@@ -1,4 +1,4 @@
-<div id="generated-toc"></div>
+<div id="generated-toc" style="display: none"></div>
 
 # About
 
@@ -18,8 +18,9 @@ What languages I speak doesn't matter, you can use *any* language to contact wit
 My PGP fingerprint is `813A0490A853F1F2`.
 
 - E-mail: `kxiang` at umich dot edu
-- [Telegram](https://telegram.me/uexha)
+- Telegram: https://telegram.me/uexha
 - Github: https://github.com/linsyking
+- vndb: https://vndb.org/u212839
 
 ## Interests & Tastes
 
@@ -43,6 +44,21 @@ Probably will study maths some time in the future...
 - Interested in Meta-maths
 - Interested in the Cat theory
 - Used to love classical euclidean geometry
+
+### Video Games
+
+I play platform games, visual novels and anything creative!
+
+- I play [Celeste](https://en.wikipedia.org/wiki/Celeste_(video_game)) speedrun
+- I play visual novel games *a lot*, part of them are on my vndb list
+
+See my VN blog posts for more information.
+
+### Novels
+
+I am a big fan of mystery novels.
+
+`todo!()`
 
 ## Some Fun Facts
 

@@ -48,21 +48,21 @@
   blog_summary_max_entries = 10
 
   ## Atom feed settings
-  atom_feeds = false
+  atom_feeds = true
 
   # If you want to generate Atom feeds, you will need to adjust the site metadata config below:
 
   # Required:
-  # site_url = "https://www.example.com/~jrandomhacker"
+  site_url = "https://blog.yydbxx.cn"
 
   # Optional but strongly recommended:
-  # site_author = "J. Random Hacker"
-  # site_author_email = "jrandomhacker@example.com"
-  # site_title = "My website"
+  site_author = "Linsy"
+  site_author_email = "kxiang@umich.edu"
+  site_title = "2-ng blog"
   # site_logo = "https://example.com/~jrandomhacker/favicon.png"
 
   # Completely optional: 
-  # site_subtitle = "Some subtitle"
+  # site_subtitle = "2-ng"
 
 [preprocessors]
   # Automatically call pandoc on every *.md page to conver it to HTML
