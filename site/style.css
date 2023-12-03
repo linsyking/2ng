@@ -38,8 +38,8 @@
     --Pre-border: #222;
     --Main-color: #f2f2f2;
     --Code-color: #2adba4; /* teal */
-    --Accent1-color: #e31e24; /* red */
-    --Accent2-color: #ef7f1a; /* orange */
+    --Accent1-color: #315ae2; /* red */
+    --Accent2-color: rgb(56, 207, 241); /* orange */
     /* via @toastal */
     --Highlight-num: #43a60d;
     --Highlight-esc: #dfad06;
@@ -441,7 +441,7 @@ pre code {
   background-color: var(--Pre-bg);
 }
 
-blockquote{
+blockquote {
   border-left: 0.5rem solid var(--Accent2-color);
   padding: 1px;
   padding-left: 1rem;
