@@ -1,6 +1,6 @@
 ---
 title: "Operating System Lab"
-date: 2023-12-09
+date: 2023-12-13
 tags:
   - teaching
   - operating_system
@@ -23,7 +23,7 @@ There are no homework, projects, etc.
 :::center
 | Topic | Date |
 | :--: | :--: |
-| The Rust Programming Language: Containers, Closures and Unsafe Rust | Dec. 17th, 2023 (Sunday) |
+| [The Rust Programming Language: Containers, Closures and Unsafe Rust](../lab1) | Dec. 17th, 2023 (Sunday) |
 :::
 
 
