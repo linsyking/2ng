@@ -17,14 +17,13 @@ I will try not including too many things in EECS482.
 ## Schedule
 
 :::warning
-We only offer lectures. There are no homework, projects, etc.
+There are no homework, projects, etc.
 :::
 
 :::center
 | Topic | Date |
 | :--: | :--: |
-| Rust | TBD |
-| Dev Environment, Initial Kernel | TBD |
+| The Rust Programming Language: Containers, Closures and Unsafe Rust | Dec. 17th, 2023 (Sunday) |
 :::
 
 
