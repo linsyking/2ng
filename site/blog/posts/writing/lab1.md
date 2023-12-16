@@ -78,11 +78,82 @@ You should be able to run the following commands:
 - `rustc`
 - `rustup`
 
-## Pointerless, Referenceless Rust Type System
+## Pointerless, Referenceless Rust
 
-To introduce the real-world rust type system, we may first start with a very limited subset of the language and extend it step by step.
+To introduce the real-world rust, we may first start with a very limited subset of the language and extend it step by step.
 
+Now consider a language without pointer and references.
 
+Let's first write down some primitive types:
+
+$$
+\mathsf{Typ}\, \tau := \mathsf{i32} | \mathsf{i64} | \mathsf{u32} | \mathsf{u64} | \mathsf{bool} | (\tau_1,\cdots, \tau_n) | ()
+$$
+
+There are also `i8`, `i16` etc. but we don't often use them.
+
+Also note that we don't have vectors, arrays, lists and strings because those things include heap allocation and will be introduced later.
+
+Let's define a few expressions:
+
+$$
+\begin{align*}
+\mathsf{Exp}\, e :&= \mathsf{Num}[n] | b | \mathsf{true} | \mathsf{false} | x\\
+&| \quad \mathsf{if}\, e_1\, \{ e_2 \} \\
+&| \quad \mathsf{if}\, e_1\, \{ e_2 \} \, \mathsf{else} \, \{e_3\} \\
+&| \quad (e_1,\cdots, e_n)\\
+&| \quad \mathsf{let}\, x = e_1\\
+&| \quad e_1;e_2\\
+&| \quad \{e\}
+\end{align*}
+$$
+
+$b$ is binary operators for numerals and $x$ is variable.
+
+However, you must need to write expressions in functions (which hasn't be defined).
+
+Try writing some code in a rust project (initialized by `cargo`).
+
+To initialize a project, run:
+
+```bash
+cargo new proj_name
+```
+
+Then go to `src/main.rs`.
+
+Change the file content to this:
+
+```rs
+fn main() {
+    let x = ();
+    println!("{:?}", x);
+}
+```
+
+Change `()` to some expressions and run your program:
+
+```bash
+cargo run
+```
+
+You are allowed to write
+
+```rs
+fn main() {
+    let x = if true {7;};
+    println!("{:?}", x);
+}
+```
+
+but not
+
+```rs
+fn main() {
+    let x = if true {7};
+    println!("{:?}", x);
+}
+```
 
 ## References & Books
 
