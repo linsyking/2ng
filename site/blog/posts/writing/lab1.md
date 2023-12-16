@@ -24,7 +24,7 @@ tags:
 
 ---
 
-## Why and When use Rust?
+## Why use Rust?
 
 Reasons you should use Rust:
 
@@ -43,12 +43,30 @@ When you see 100 errors:
 
 <img src="../lab/crab2.png"></img>
 
-When to?
+## Mindset
+
+- Please read compile errors
+- Do not use design patterns and coding styles from other languages
+- Use community libraries
+- Do not try writing "recursive data structures"
+- Do not use references in struct unless necessary
+
+:::tip Think
+Why do we need new programming languages like Rust?
+:::
+
+And most importantly, Rust has nothing to do with Genshin Impact.
 
 ## Coding Environment
 
 - Install [rustup](https://rustup.rs/)
 - Use a (modern) IDE/Editor
+
+Run once after installation:
+
+```bash
+rustup default stable
+```
 
 You can run `rustup update` to update toolchains(compilers, analyzer, etc.).
 
