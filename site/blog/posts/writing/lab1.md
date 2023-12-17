@@ -9,7 +9,6 @@ tags:
 :::tip Objectives
 - Use `cargo`
 - Ownership, borrowing, lifetime
-- Macros
 - Traits
 - Closures
 :::
@@ -26,7 +25,7 @@ Reasons you should use Rust:
 - Memory safe, thread safe
 - Very **productive** (if used correctly)
 - Cute crab
-- Large community (comparing to Ocaml and Haskell)
+- Large community (comparing to OCaml and Haskell)
 - Industrial-strength standard library
 - No GCs
 
