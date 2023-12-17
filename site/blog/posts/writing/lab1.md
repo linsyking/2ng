@@ -93,7 +93,7 @@ Let's define a few expressions:
 
 $$
 \begin{align*}
-\mathsf{Exp}\, e :&= \underline{n} | b | \mathsf{true} | \mathsf{false} | x\\
+\mathsf{Exp}\, e :&= \underline{n} | e_1 b e_2 | \mathsf{true} | \mathsf{false} | x\\
 &| \quad \mathsf{if}\, e_1\, \{ e_2 \} \\
 &| \quad \mathsf{if}\, e_1\, \{ e_2 \} \, \mathsf{else} \, \{e_3\} \\
 &| \quad (e_1,\cdots, e_n)\\
