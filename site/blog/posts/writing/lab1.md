@@ -8,13 +8,10 @@ tags:
 
 :::tip Objectives
 - Use `cargo`
-- Move and borrow semantics
-- Primitives
+- Ownership, borrowing, lifetime
 - Macros
-- FP Features
 - Traits
 - Mutable programming
-- Unsafe Rust
 - Writing tests
 - Closures
 - Lifetime
@@ -195,28 +192,6 @@ fn main() {
 }
 ```
 
-### Ownership
-
-What Rust wants to solve is the "memory-safe" problem.
-
-> Memory safety is the property of a program where memory pointers used always point to **valid memory**, i.e. allocated and of the correct type/size.
-
-:::warning
-Rust doesn't ensure no memory leak. This is not part of memory safe property.
-
-> Rust's memory safety guarantees make it difficult, but not impossible, to accidentally create memory that is never cleaned up (known as a memory leak). Preventing memory leaks entirely is not one of Rust's guarantees, meaning memory leaks are memory safe in Rust.
-
-If you don't use cyclic `Rc`s, you'd probably not encounter memory leak though.
-:::
-
-:::info Ownership Rules
-1. Each value in Rust has an owner.
-2. There can only be one owner at a time.
-3. When the owner goes out of **scope**, the value will be dropped.
-:::
-
-See [the tutorial on ownership](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#ownership-rules).
-
 ## Top-level Functions
 
 The following notes have heavy dependencies on functions, so let's introduce them here.
@@ -236,6 +211,47 @@ fn main() { // Equivalent to `fn main() -> () {`
     // Returns a `()`
 }
 ```
+
+## Ownership
+
+What Rust wants to solve is the "memory-safe" problem.
+
+> Memory safety is the property of a program where memory pointers used always point to **valid memory**, i.e. allocated and of the correct type/size.
+
+:::warning
+Rust doesn't ensure no memory leak. This is not part of memory safe property.
+
+> Rust's memory safety guarantees make it difficult, but not impossible, to accidentally create memory that is never cleaned up (known as a memory leak). Preventing memory leaks entirely is not one of Rust's guarantees, meaning memory leaks are memory safe in Rust.
+
+If you don't use cyclic `Rc`s, you'd probably not encounter memory leak though.
+:::
+
+:::info Ownership Rules
+1. Each value in Rust has an owner.
+2. There can only be one owner at a time.
+3. When the owner goes out of **scope**, the value will be dropped.
+:::
+
+There are many ways to transfer ownership. For example,
+
+```rs
+let x = (y, z); // y and z are moved!
+let k = (x, x); // Error! the second x uses x after move
+```
+
+```rs
+fn m(a: String) -> String {
+    a
+}
+
+fn main() {
+    let x = String::from("hi");
+    let y = m(x); // x is moved to the function
+    // ...
+}
+```
+
+See [the tutorial on ownership](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#ownership-rules).
 
 ## References
 
@@ -260,6 +276,25 @@ $$
 References are *borrowing* values from its owner.
 
 > As in real life, if a person owns something, you can borrow it from them. When you’re done, you have to give it back. You don’t own it.
+
+### Dangling References
+
+```rs
+fn main() {
+    let reference_to_nothing = dangle();
+}
+
+fn dangle() -> &String {
+    let s = String::from("hello");
+
+    &s
+}
+```
+
+### Rules of References
+
+- At any given time, you can have **either** one mutable reference **or** any number of immutable references.
+- References must always be valid.
 
 ## Vectors and Slices
 
@@ -311,10 +346,25 @@ $$
 
 
 $$
-\mathsf{Exp}\, e := \cdots | [e_1, \cdots, e_n]
+\mathsf{Exp}\, e := \cdots | [e_1, \cdots, e_n] | e[\underline{n}] | e[\underline{n_1}..\underline{n_2}] | e[\underline{n_1}..=\underline{n_2}]
 $$
 
 Arrays are allocated on the stack because its size is known.
+
+```rs
+fn main() {
+    let x = [1, 2, 3, 4, 5];
+    println!("{}", x[0]); // 1
+    let slice = &x[1..2];
+    println!("{:?}", slice); // [2]
+}
+```
+
+## Lifetime
+
+## Structs, Enums and Pattern Matching
+
+## Trait System
 
 ## References & Books
 
