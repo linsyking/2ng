@@ -389,7 +389,24 @@ See [doc](https://doc.rust-lang.org/nomicon/lifetime-elision.html#lifetime-elisi
 
 Very PL, read the page above if you are interested!
 
-(In reality, no one uses it because it's too complicated)
+(In reality, few uses it because it's too complicated)
+
+The key idea is "covariance".
+
+We use notation `F<T>` where `T` is lifetime and `F` is some special "container" including `&`, `&mut` etc.
+
+We know that in a program, the lifetime of all variables is a **continuous** region of code.
+
+:::success Definition
+`'a` is a region of code, and
+
+`'a: 'b` (`'a` subtypes `'b`) if and only if `'a` **completely contains** `'b`.
+:::
+
+
+We note that if `'a: 'b`, then `&'a: 'b`. This is called *covariant*.
+
+However, if `'a: 'b`, then we cannot infer `&'a mut: &'b mut` and also no `&'b mut: &'a mut` (Why?). This is called *invariant*.
 
 ## Containers
 
@@ -466,6 +483,24 @@ let y = x.len();
 ```
 
 This `let y = x.len();` will be desugared to `let y = String::len(x)` is the signature of `len` function starts with a `self`, `&self`, or `&mut self`.
+
+### Associative types
+
+We can define some types in a trait. A famous example is the GAT design pattern in Rust:
+
+[Reddit Post](https://www.reddit.com/r/rust/comments/ynvm8a/could_someone_explain_the_gats_like_i_was_5/)
+
+We want to implement `map` for both `Result` and `Option`:
+
+```rs
+trait Mappable {
+    type Item;
+    type Result<U>;
+    fn map<U, P: FnMut(Self::Item) -> U>(self, f: P) -> Self::Result<U>;
+}
+```
+
+The `type` will be inferred when implementing the trait, like OCaml module type specification.
 
 ## Iterators
 
