@@ -414,12 +414,50 @@ Inner mutable mode, not recommended to use in safe Rust.
 
 ## Structs, Enums and Pattern Matching
 
+You can use `#[derive(Debug, ...)]` to automatically implement those traits for your structs/enums.
+
+- Pattern matching
+- Pattern matching guard
+
 ## Trait System
+
+Traits are very like typeclasses in Haskell. It is like specifying an interface (shared behaviors):
+
+```rs
+trait Qs {
+    fn qs(&self) -> i32;
+    fn qs2(&self, s: i32) -> i32;
+}
+```
+
+You can do "subtrait" to require that it must also satisfy that trait. For example, the `Eq` trait is a subtrait of `PartialEq`.
 
 ## Closures
 
-## Function Traits
+Closures are local functions that can capture some variables.
 
+There are two kinds of closures: a standard one and a moved one.
+
+```rs
+|x| x + 1
+// Means
+fn _(x: &i32, <env>) -> i32{
+    *x + 1
+}
+// Here <env> is the captured environment
+```
+
+```rs
+|| x
+// Means
+fn _(<env>) -> i32{
+    env.x
+}
+```
+
+```rs
+move |x| x + y       // y will be moved
+```
 
 ## References & Books
 
