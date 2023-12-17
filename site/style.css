@@ -444,6 +444,8 @@ blockquote {
   border-left: 0.5rem solid var(--Accent2-color);
   padding: 1px;
   padding-left: 1rem;
+  padding-right: 1rem;
   margin-left: 0;
+  margin-right: 2rem;
   background-color: var(--Pre-bg);
 }
