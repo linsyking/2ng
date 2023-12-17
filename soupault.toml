@@ -232,7 +232,7 @@
 # It calculates estimated reading time based on word count
 [widgets.insert-reading-time]
   widget = "reading-time"
-  reading_speed = 350
+  reading_speed = 100
 
   # If this widget runs before "insert-reading-time-container",
   # there will be nowhere to insert the reading time.

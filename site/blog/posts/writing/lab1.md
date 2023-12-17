@@ -1,5 +1,5 @@
 ---
-title: "The Rust Programming Language: Containers, Closures and Unsafe Rust"
+title: "The Rust Programming Language: Three Easy Pieces"
 date: 2023-12-13
 tags:
   - teaching
