@@ -99,7 +99,7 @@ Let's define a few expressions:
 
 $$
 \begin{align*}
-\mathsf{Exp}\, e :&= \mathsf{Num}[n] | b | \mathsf{true} | \mathsf{false} | x\\
+\mathsf{Exp}\, e :&= \underline{n} | b | \mathsf{true} | \mathsf{false} | x\\
 &| \quad \mathsf{if}\, e_1\, \{ e_2 \} \\
 &| \quad \mathsf{if}\, e_1\, \{ e_2 \} \, \mathsf{else} \, \{e_3\} \\
 &| \quad (e_1,\cdots, e_n)\\
@@ -217,6 +217,50 @@ If you don't use cyclic `Rc`s, you'd probably not encounter memory leak though.
 
 See [the tutorial on ownership](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#ownership-rules).
 
+## Top-level Functions
+
+The following notes have heavy dependencies on functions, so let's introduce them here.
+
+Top-level functions are defined at the top level (not in a function!).
+
+Exampls:
+
+```rs
+fn max(a: i32, b: i32) -> i32 {
+    // ...
+    // Returns an `i32`
+}
+
+fn main() { // Equivalent to `fn main() -> () {`
+    // ...
+    // Returns a `()`
+}
+```
+
+## References
+
+Now it's time to introduce th references!
+
+There are two kinds of references in Rust:
+
+- Immutable references: `&T`
+- Mutable references: `&mut T`
+
+Modify our types and expressions:
+
+$$
+\mathsf{Typ}\, \tau := \cdots | \& \tau | \& \mathsf{mut} \, \tau
+$$
+
+
+$$
+\mathsf{Exp}\, e := \cdots | \& e | \& \mathsf{mut} \, e | *e
+$$
+
+References are *borrowing* values from its owner.
+
+> As in real life, if a person owns something, you can borrow it from them. When you’re done, you have to give it back. You don’t own it.
+
 ## Vectors and Slices
 
 In Rust, you may find that there are two kinds of strings: `&str` and `String`. Why do we need two?
@@ -225,7 +269,52 @@ Under the hood, strings can be modeled by *an array of chars*. A char is a new t
 
 Therefore, we may first need to understand the difference between `Vec<T>` (`String`) and `&[T]` (`&str`).
 
-All resources, including primitive ones and 
+All resources, including primitive ones (`Copy`able, size known at compile time) and heap-allocated data types (size of the inner data unknown at compile time), will be allocated to some memory address.
+
+:::tip Note
+Although Strings and vectors are non-copyable, they are still sized. Because they store the pointer.
+:::
+
+The primitive data types, like `i32`, which implements the `Copy` trait, is **stored on the stack** because the size is known at compile time.
+
+On the other hand, the size of (inner data of) vectors, or arrays, cannot be determined during compile time, so it cannot live on the stack.
+
+For the copyable data types, there is no `Move`. For example,
+
+```rs
+fn main() {
+    let x = 12;
+    let y = x;
+    let z = x + y;
+    println!("{:?}", z);
+}
+```
+
+Here `x` is not moved to `y`, it is copied to `y`. As a result we can use `x` in `z`.
+
+However for a non-copyable data type, for example, a `String`, the resource will be moved (transfer the ownership):
+
+```rs
+fn main() {
+    let x = String::from("Hello");
+    let y = x;  // Here `x` is moved to `y`
+    let z = x;  // Error! use of moved value
+    println!("{:?}", z);
+}
+```
+
+The array data type is now added to our `Typ` and `Exp`:
+
+$$
+\mathsf{Typ}\, \tau := \cdots | [\tau ; \underline{n}]
+$$
+
+
+$$
+\mathsf{Exp}\, e := \cdots | [e_1, \cdots, e_n]
+$$
+
+Arrays are allocated on the stack because its size is known.
 
 ## References & Books
 
