@@ -360,11 +360,66 @@ fn main() {
 }
 ```
 
+## Generics
+
+```rs
+fn fst<T>(a: &Vec<T>) -> &T{
+    &a[0]
+}
+```
+
+Adding some trait bounds:
+
+```rs
+fn fst<T: std::fmt::Display + Clone>(a: &Vec<T>) -> &T{
+    let b = a.clone();
+    println!("{}", b[0]);
+    &a[0]
+}
+```
+
 ## Lifetime
+
+Lifetimes are denoted with an apostrophe, like `'a`.
+
+See [doc](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html).
+
+### Lifetime Elision
+
+See [doc](https://doc.rust-lang.org/nomicon/lifetime-elision.html#lifetime-elision).
+
+### Subtyping & Variance
+
+Very PL, check it out if you are interested!
+
+(In reality, no one uses it because it's too complicated)
+
+## Containers
+
+### Box
+
+Unique pointer. Mostly used.
+
+### Rc
+
+When you have multiple objects borrowing one object.
+
+If cyclic reference is needed, you must use `Weak` pointer, memory leak otherwise.
+
+### Cell & RefCell
+
+Inner mutable mode, not recommended to use in safe Rust.
+
+(It is used to implement linked list)
 
 ## Structs, Enums and Pattern Matching
 
 ## Trait System
+
+## Closures
+
+## Function Traits
+
 
 ## References & Books
 
