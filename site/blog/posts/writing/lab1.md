@@ -11,10 +11,7 @@ tags:
 - Ownership, borrowing, lifetime
 - Macros
 - Traits
-- Mutable programming
-- Writing tests
 - Closures
-- Lifetime
 :::
 
 *Rust is like C, and unlike C.*
