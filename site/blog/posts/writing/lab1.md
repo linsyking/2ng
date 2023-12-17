@@ -11,6 +11,7 @@ tags:
 - Ownership, borrowing, lifetime
 - Traits
 - Closures
+- Vectors, Strings, Iterators
 :::
 
 *Rust is like C, and unlike C.*
@@ -386,7 +387,7 @@ See [doc](https://doc.rust-lang.org/nomicon/lifetime-elision.html#lifetime-elisi
 
 ### Subtyping & Variance
 
-Very PL, check it out if you are interested!
+Very PL, read the page above if you are interested!
 
 (In reality, no one uses it because it's too complicated)
 
@@ -415,19 +416,6 @@ You can use `#[derive(Debug, ...)]` to automatically implement those traits for 
 - Pattern matching
 - Pattern matching guard
 
-## Trait System
-
-Traits are very like typeclasses in Haskell. It is like specifying an interface (shared behaviors):
-
-```rs
-trait Qs {
-    fn qs(&self) -> i32;
-    fn qs2(&self, s: i32) -> i32;
-}
-```
-
-You can do "subtrait" to require that it must also satisfy that trait. For example, the `Eq` trait is a subtrait of `PartialEq`.
-
 ## Closures
 
 Closures are local functions that can capture some variables.
@@ -454,6 +442,107 @@ fn _(<env>) -> i32{
 ```rs
 move |x| x + y       // y will be moved
 ```
+
+## Trait System
+
+Traits are very like typeclasses in Haskell. It is like specifying an interface (shared behaviors):
+
+```rs
+trait Qs {
+    fn qs(&self) -> i32;
+    fn qs2(&self, s: i32) -> i32;
+}
+```
+
+You can do "subtrait" to require that it must also satisfy that trait. For example, the `Eq` trait is a subtrait of `PartialEq`.
+
+Like implementing a trait, you may also implement some methods for a struct/enum.
+
+Rust has a syntax sugar to call those methods. For example, when you are using a string:
+
+```rs
+let x = String::from("asd");
+let y = x.len();
+```
+
+This `let y = x.len();` will be desugared to `let y = String::len(x)` is the signature of `len` function starts with a `self`, `&self`, or `&mut self`.
+
+## Iterators
+
+Iterators are very useful and Rust claims that they are zero-cost abstraction.
+
+The most basic iterators are ranges. In python, you may have:
+
+```py
+for i in range(0, 10):
+    print(i)
+```
+
+In Rust, you have:
+
+```rs
+for i in 0..10 {
+    println!("{}", i);
+}
+```
+
+This `0..10` will be evaluated to a iterator. (the object to iterate must implement the `Iterator` trait)
+
+### `into_iter`, `iter`
+
+The first one may use or not use reference, `iter` will enforce to use the reference (which is better).
+
+Compare this:
+
+```rs
+let v = vec![1, 2, 3];
+for vi in v.iter() {
+    println!("{}", vi);
+}
+```
+
+with
+
+```rs
+let v = vec![1, 2, 3];
+for vi in v {   // = v.into_iter()
+    println!("{}", vi);
+}
+```
+
+### Enumerate
+
+It's like `enumerate` in python:
+
+```rs
+let v = vec![1, 2, 3];
+for (id: usize, v: &i32) in v.iter().enumerate() {
+    println!("{}, {}", id, v);
+}
+```
+
+### Zip
+
+```rs
+let v = vec![1, 2, 3];
+let v2 = vec![1, 2, 3];
+for (vv, v2v) in v.iter().zip(v2.iter()) {
+    println!("{}, {}", vv, v2v);
+}
+```
+
+### Iterator Mapping
+
+For example, if we want to map every element to its successor, we can write:
+
+```rs
+let v = vec![1, 2, 3];
+let nv: Vec<_> = v.iter().map(|x| x + 1).collect();
+```
+
+The `map` can also be chained.
+
+There are also some other methods like `filter`, `find`.
 
 ## References & Books
 
