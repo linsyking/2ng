@@ -24,7 +24,7 @@ In this example, Github acts as an *authority* that both students and teachers t
 However, there are some problems:
 
 - What if I don't want others know that I was publishing those things? I want to do this **anonymously**!
-- What if my homework is very large (say 10GB) and it's **impossible to upload** to the server (the authority)? I want to do coding and verifying locally for both students and teachers.
+- What if my homework is very large (say 10GB) and it's **impossible to upload** to the server (the authority)? I want to do coding and verifying locally for both students and teachers. (OK, hashing is a good solution though)
 
 ## Problem Description
 
