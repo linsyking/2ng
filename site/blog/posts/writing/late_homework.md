@@ -15,7 +15,7 @@ We can create a GitHub **public** repository and upload the encrypted homework b
 You may also replace GitHub with any big social media, like Twitter or Instagram.
 :::
 
-In this example, Github acts as an *authority* that both students and teachers believe.
+In this example, Github acts as an *authority* that both students and teachers trust.
 
 :::center
 <img src="../svg/authority2.png" width="50%"/>
@@ -42,6 +42,7 @@ John soon realized that it was impossible to prove without an external authority
 - When sending the `GET` request, the authority can respond **anything** (e.g. return a program that can be run on student's computer)
 - Peter can only communicate with the authority after his leave
 - It's allowed to use the HTTP session for the server to identify if you are the same person accessing the authority in a few minutes (session expire time) (this is the only information you can send to the authority)
+- There might be other students access the authority and even some attackers
 
 Assume that we can design the authority server and give it to Peter. How can we design it so that John can proves he did his homework before due and Peter can verify his statement?
 
