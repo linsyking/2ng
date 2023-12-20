@@ -14,5 +14,8 @@ This new SSG is much faster.
 
 I may want to replace it with a faster parser in the future.
 
-- NodeJS (`markdown-it`)
+- NodeJS (`markdown-it`): run `pnpm i` after clone
 - [soupault](https://soupault.app/)
+- highlight
+- rust
+- convert (imagemagick)
