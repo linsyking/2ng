@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="106.702mm"
+   height="74.847mm"
+   viewBox="0 0 53.351002 37.4235"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   sodipodi:docname="authority1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.4004209"
+     inkscape:cx="4.2844264"
+     inkscape:cy="99.969948"
+     inkscape:window-width="1920"
+     inkscape:window-height="999"
+     inkscape:window-x="0"
+     inkscape:window-y="41"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker11"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide, rounded arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path11" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowWideRounded"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide, rounded arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker14"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide, rounded arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path14" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-12.120669,-6.253868)">
+    <g
+       id="g1"
+       transform="translate(4.1564888,1.7948474)">
+      <g
+         id="g6"
+         transform="translate(-2.0501276,-17.618784)">
+        <circle
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1;stroke-opacity:1"
+           id="path1"
+           cx="21.585138"
+           cy="46.979424"
+           r="7.3643417" />
+        <text
+           xml:space="preserve"
+           style="font-size:3.23053px;line-height:0;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.0763117;stroke-opacity:1"
+           x="16.052883"
+           y="48.142078"
+           id="text2"><tspan
+             sodipodi:role="line"
+             id="tspan2"
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0763117;stroke-opacity:0"
+             x="16.052883"
+             y="48.142078">Student</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:2.40884px;line-height:0;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0569017;stroke-opacity:0"
+           x="16.849144"
+           y="57.18399"
+           id="text5"><tspan
+             sodipodi:role="line"
+             id="tspan5"
+             style="stroke-width:0.0569017"
+             x="16.849144"
+             y="57.18399">(Prover)</tspan></text>
+      </g>
+      <g
+         id="g5"
+         transform="translate(-28.206244,-18.231385)">
+        <circle
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1;stroke-opacity:1"
+           id="path1-3"
+           cx="77.476357"
+           cy="47.896305"
+           r="7.3643417" />
+        <text
+           xml:space="preserve"
+           style="font-size:3.39623px;line-height:0;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0802261;stroke-opacity:0"
+           x="71.51593"
+           y="49.036728"
+           id="text3"><tspan
+             sodipodi:role="line"
+             id="tspan3"
+             style="stroke-width:0.0802261"
+             x="71.51593"
+             y="49.036728">Teacher</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:2.51768px;line-height:0;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0594727;stroke-opacity:0"
+           x="73.092163"
+           y="57.7724"
+           id="text4"><tspan
+             sodipodi:role="line"
+             id="tspan4"
+             style="stroke-width:0.0594727"
+             x="73.092163"
+             y="57.7724">(Verifier)</tspan></text>
+      </g>
+      <g
+         id="g2"
+         transform="translate(-6.2401836,-13.050427)"
+         style="stroke-width:0.2;stroke-dasharray:none">
+        <rect
+           style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.2;stroke-dasharray:none"
+           id="rect1"
+           width="25.058033"
+           height="8.0438633"
+           x="28.419266"
+           y="19.404295" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:0;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.2;stroke-dasharray:none"
+           x="33.012566"
+           y="24.759426"
+           id="text1"><tspan
+             sodipodi:role="line"
+             id="tspan1"
+             style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:0"
+             x="33.012566"
+             y="24.759426">Authority</tspan></text>
+      </g>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker11)"
+         d="M 37.523866,14.397731 44.36618,24.17101"
+         id="path8"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-end="#g5" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 61.315202,17.78781 v 0"
+         id="path9"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideRounded)"
+         d="m 31.752546,14.397731 -7.102437,9.665051"
+         id="path10"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-end="#g6" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker14)"
+         id="path13"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#g6"
+         inkscape:connection-end="#g5"
+         d="m 26.700563,31.060109 15.354315,0.07856" />
+    </g>
+  </g>
+</svg>
