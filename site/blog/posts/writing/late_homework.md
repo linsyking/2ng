@@ -104,5 +104,5 @@ Assume that John didn't complete his homework before due and tries to use an alt
 
 The only way to crack this method is to send requests at random time and try to create a hash conflict.
 
-you probably need to run approximately $(2^{15})^7 = 2^{105}$ tests to find a conflict and it's very unlikely.
+He need to run approximately $(2^{15})^7 = 2^{105}$ tests to find a conflict and it's very unlikely to happen in a short time.
 :::
