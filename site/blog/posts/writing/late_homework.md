@@ -55,7 +55,7 @@ We need to design the authority server and give it to Peter. How can we design i
 ::::
 
 :::tip Hint
-At first glance, it seems impossible to get a certificate for John that could work after a lot of days because **the things you know in the future is larger than what you know in the past**.
+At first glance, it seems impossible to get a certificate for John that could work after a lot of days because **the things you know in the future completely contain what you know in the past**.
 
 For example, if you get some data $I$ from the authority before due, then through some calculation you get $f(I, m)$ where $m$ is your homework, then after a few days you can still calculate $f(I, m')$ where $m'$ is a modified homework, if $f$ doesn't bring any side-effects.
 
