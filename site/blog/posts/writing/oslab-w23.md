@@ -24,7 +24,7 @@ There are no homework, projects, etc.
 | Topic | Date |
 | :--: | :--: |
 | [The Rust Programming Language: Three Easy Pieces](../lab1) | Dec. 17th, 2023 (Sunday), 14:00 - 16:00 |
-| [Concurrency Models in Rust](../lab2) | Dec. 26th, 2023 (Tuesday), 14:00 - 16:00 |
+| [Writing a UNIX Shell in Rust](../lab2) | Dec. 26th, 2023 (Tuesday), 14:00 - 16:00 |
 :::
 
 

@@ -4,6 +4,7 @@ date: 2023-12-13
 tags:
   - teaching
   - programming_language
+  - rust
 ---
 
 :::tip Objectives
