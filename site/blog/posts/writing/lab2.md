@@ -55,13 +55,20 @@ Try `bash`, `zsh`, or `fish`.
 - Background execution
 - Pipes and redirection
 
+Download the [exercise zip](https://github.com/linsyking/OS-Notes/releases/download/lab2/exercise.zip).
+
+Tasks:
+
+- Understand the structure of the code
+- Write a `check_prog` function
+- Add L/R-redirection call
+- Add pipe support
+
 ## "Frontend" - Lexer and Parser
 
 We first need to parse the user input.
 
 A hand-written lexer and parser is provided.
-
-TODO: write the `check_prog` function to validate the AST.
 
 ## Pipes
 
@@ -72,6 +79,11 @@ Differences: [answer](https://unix.stackexchange.com/questions/69057/what-are-th
 ### Unnamed pipes
 
 Rule: **read end will be blocked if there exists any write end**.
+
+:::tip Think
+It makes sense to close the write end in the parent process because the read end cannot tell whether there is still input coming.
+But why is it necessary to close the read end in the child process? (It will not block any process)
+:::
 
 ```sh
 p1 | p2
@@ -90,3 +102,7 @@ p1 | p2 | p3
 <img src="../lab/p3.png" style="width:80%" />
 <img src="../lab/p3s.png"  style="width:85%; margin-top: 3rem" />
 :::
+
+## Final product
+
+The source code of the project is on [my github repo](https://github.com/linsyking/OS-Notes/).
