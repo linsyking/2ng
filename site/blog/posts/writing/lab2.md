@@ -32,6 +32,10 @@ Unix models process as some `task_struct` struct. OS will switch processes (cont
 
 A simple state diagram has five states.
 
+:::center
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Process_states.svg/600px-Process_states.svg.png)
+:::
+
 ### Process Control Block (PCB)
 
 To switch and restore processes, we need to represent a process internally in OS. It usually includes process state, pid, program counter, registers, memory info (base and limit registers, page tables, etc.), a list of open files, and other info OS needs.
@@ -39,6 +43,8 @@ To switch and restore processes, we need to represent a process internally in OS
 In Linux, it is `task_struct`. The Linux kernel maintains a doubly linked list and a pointer to the PCB of current running process.
 
 ### Scheduling queues
+
+There is a ready queue and several wait queues. When a process needs an I/O request, it will be put into an I/O wait queue and when the I/O resource is ready, OS will put the process again to the ready queue. Similarly there is a "child termination wait queue" (which we need for implementing shell).
 
 ## Process creation
 
