@@ -40,7 +40,7 @@ For example, we want to get a component from VM2 to VM1 (assume this operation i
 3. Acquire VM_tmp lock
 4. Deep copy component from VM2 to VM_tmp
 5. Release VM_tmp lock
-6. Acquire VM2 lock
+6. Acquire VM1 lock
 7. Acquire VM_tmp lock
 8. Deep copy component from VM_tmp to VM1
 9. Release VM_tmp lock
