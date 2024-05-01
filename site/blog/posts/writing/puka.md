@@ -2,7 +2,7 @@
 title: "Puka: A Multi-platform 2D Game Engine with Concurrency Support"
 date: 2024-4-17
 tags:
-  - portfolio
+  - game
 ---
 
 ## Introduction
