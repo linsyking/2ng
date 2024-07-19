@@ -44,10 +44,16 @@ content = HTML.strip_tags(content_element)
 
 -- Calculate the word count
 words = Regex.split(content, "\\s+")
+chars = Regex.split(content, "[^[:ascii:]]")
 word_count = size(words)
+char_count = size(chars)
 
 -- Make a reading time text
 reading_time = floor(word_count / reading_speed)
+
+if (reading_time <= 1) then
+  reading_time = floor((char_count / 10) / reading_speed)
+end
 
 if (reading_time <= 1) then
   time_msg = "less than a minute"

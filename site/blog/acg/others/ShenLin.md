@@ -1,11 +1,10 @@
 ---
 title: 神林家殺人事件
 date: 2023-10-17 15:29:47
-categories:
-  - novel
 tags:
   - mystery
-  - meta
+  - game
+  - rpg
   - murder
 ---
 
