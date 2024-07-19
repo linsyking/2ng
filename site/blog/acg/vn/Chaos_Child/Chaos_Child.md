@@ -1,7 +1,8 @@
 ---
 title: Chaos;Child
 date: 2022-01-05 13:30:46
-custombg: bg.png
+custombg:
+  - ../bg.png
 categories:
   - VN
 tags:
@@ -18,7 +19,7 @@ tags:
 :::
 
 ::: center
-<img src="https://blog.yydbxx.cn/assets/blogassets/dcab8d/intro.jpg" style="width:50%;"></img>
+<img src="../intro.jpg" style="width:30vw;"></img>
 :::
 
 ## 基本信息

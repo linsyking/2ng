@@ -1,7 +1,8 @@
 ---
 title: 穢翼のユースティア
 date: 2022-05-04 14:21:05
-custombg: bg.jpg
+custombg:
+  - ../bg.jpg
 categories:
   - VN
 tags:

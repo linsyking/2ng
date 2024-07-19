@@ -1,7 +1,8 @@
 ---
 title: Root Double
 date: 2022-05-29 20:30:44
-custombg: bg.jpg
+custombg:
+  - ../bg.jpg
 categories:
   - VN
 tags:

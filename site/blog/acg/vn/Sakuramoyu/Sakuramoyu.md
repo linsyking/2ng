@@ -1,7 +1,8 @@
 ---
 title: さくら、もゆ。-as the Night's, Reincarnation-
 date: 2022-10-22 21:20:51
-custombg: bg.png
+custombg:
+  - ../bg.png
 categories:
   - VN
 tags:
