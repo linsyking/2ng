@@ -35,6 +35,7 @@ fn parse(str: &str) -> Option<String> {
     let value = value.as_mapping()?;
     let title = value.get("title")?.as_str()?;
     let date = value.get("date")?.as_str()?;
+    let custombg = value.get("custombg")?.as_str()?;
     let mut toc = false;
     if let Some(t) = value.get("toc") {
         toc = t.as_bool().unwrap();
@@ -57,6 +58,8 @@ fn parse(str: &str) -> Option<String> {
     } else {
         res.push_str("<div id=\"generated-toc\" style=\"display: none\"></div>");
     }
+    let bgimg_insert = format!("<script> document.bgimgs = [\"{}\"]</script>", custombg);
+    res.push_str(&bgimg_insert);
     res.push_str("\n\n");
     Some(res)
 }

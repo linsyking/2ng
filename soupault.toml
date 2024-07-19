@@ -7,7 +7,7 @@
   caching = true
 
   # Show build progress
-  verbose = false
+  verbose = true
 
   # Show detailed debug information
   debug = false
@@ -65,8 +65,8 @@
   # site_subtitle = "2-ng"
 
 [asset_processors]
-  svg = "convert -background none {{source_file_path}} {{target_dir}}/{{source_file_base_name}}.png"
-  ipe = "iperender -png -resolution 200 -transparent {{source_file_path}} {{target_dir}}/{{source_file_base_name}}.png"
+  # svg = "convert -background none {{source_file_path}} {{target_dir}}/{{source_file_base_name}}.png"
+  # ipe = "iperender -png -resolution 200 -transparent {{source_file_path}} {{target_dir}}/{{source_file_base_name}}.png"
 
 [preprocessors]
   # Automatically call pandoc on every *.md page to convert it to HTML

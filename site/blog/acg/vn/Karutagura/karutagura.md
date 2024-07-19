@@ -3,6 +3,7 @@ title: 恋狱 ～月狂病～
 date: 2022-12-16 20:42:42
 categories:
   - VN
+custombg: "../bg.jpg"
 tags:
   - terror
   - mystery

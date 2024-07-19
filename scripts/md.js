@@ -15,7 +15,7 @@ var mdit = require('markdown-it'), md = new mdit({
         var m = tokens[idx].info.trim().match(/^details\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            let ins = m[1]?md.utils.escapeHtml(m[1]):"Details";
+            let ins = m[1] ? md.utils.escapeHtml(m[1]) : "Details";
             return '<details class="custom-block details"><summary>' + ins + '</summary>\n';
 
         } else {
@@ -45,7 +45,7 @@ var mdit = require('markdown-it'), md = new mdit({
         var m = tokens[idx].info.trim().match(/^info\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            let ins = m[1]?md.utils.escapeHtml(m[1]):"Info";
+            let ins = m[1] ? md.utils.escapeHtml(m[1]) : "Info";
             return '<div class="custom-block info"><p class="title">' + ins + '</p>\n';
 
         } else {
@@ -62,7 +62,7 @@ var mdit = require('markdown-it'), md = new mdit({
         var m = tokens[idx].info.trim().match(/^success\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            let ins = m[1]?md.utils.escapeHtml(m[1]):"Success";
+            let ins = m[1] ? md.utils.escapeHtml(m[1]) : "Success";
             return '<div class="custom-block success"><p class="title">' + ins + '</p>\n';
 
         } else {
@@ -79,7 +79,7 @@ var mdit = require('markdown-it'), md = new mdit({
         var m = tokens[idx].info.trim().match(/^tip\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            let ins = m[1]?md.utils.escapeHtml(m[1]):"Tip";
+            let ins = m[1] ? md.utils.escapeHtml(m[1]) : "Tip";
             return '<div class="custom-block tip"><p class="custom-block-title">' + ins + '</p>\n';
 
         } else {
@@ -96,7 +96,7 @@ var mdit = require('markdown-it'), md = new mdit({
         var m = tokens[idx].info.trim().match(/^warning\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            let ins = m[1]?md.utils.escapeHtml(m[1]):"Warning";
+            let ins = m[1] ? md.utils.escapeHtml(m[1]) : "Warning";
             return '<div class="custom-block warning"><p class="custom-block-title">' + ins + '</p>\n';
 
         } else {
@@ -113,7 +113,7 @@ var mdit = require('markdown-it'), md = new mdit({
         var m = tokens[idx].info.trim().match(/^danger\s*(.*)$/);
 
         if (tokens[idx].nesting === 1) {
-            let ins = m[1]?md.utils.escapeHtml(m[1]):"Danger";
+            let ins = m[1] ? md.utils.escapeHtml(m[1]) : "Danger";
             return '<div class="custom-block danger"><p class="custom-block-title">' + ins + '</p>\n';
 
         } else {
