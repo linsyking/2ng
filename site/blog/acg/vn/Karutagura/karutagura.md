@@ -4,7 +4,7 @@ date: 2022-12-16 20:42:42
 categories:
   - VN
 custombg:
-  - ../bg.jpg
+  - $url(bg.jpg)
 tags:
   - terror
   - mystery
@@ -14,7 +14,7 @@ tags:
 :::center
 *それは、妄執と狂気に至る愛。*
 
-<img src="../yulo.jpg" style="width: 50rem"></img>
+<img src="$url(yulo.jpg)" style="width: 50rem"></img>
 
 :::
 

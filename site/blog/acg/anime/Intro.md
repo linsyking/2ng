@@ -2,7 +2,7 @@
 title: Animation Introduction
 date: 2022-04-21 23:32:33
 custombg:
-  - /pic/bg6.jpg
+  - $url(/pic/bg6.jpg)
 tags:
   - anime
   - intro

@@ -2,7 +2,7 @@
 title: Chaos;Child
 date: 2022-01-05 13:30:46
 custombg:
-  - ../bg.png
+  - $url(bg.png)
 categories:
   - VN
 tags:
@@ -19,7 +19,7 @@ tags:
 :::
 
 ::: center
-<img src="../intro.jpg" style="width:30vw;"></img>
+<img src="$url(intro.jpg)" style="width:30vw;"></img>
 :::
 
 ## 基本信息

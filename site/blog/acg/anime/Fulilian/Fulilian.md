@@ -2,7 +2,7 @@
 title: 葬送的芙莉莲
 date: 2024-07-19 22:46:08
 custombg:
-  - ../bg.jpg
+  - $url(bg.jpg)
 tags:
   - anime
   - fantacy

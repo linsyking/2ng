@@ -3,10 +3,10 @@ var slideTime = 10000;
 
 if (!document.bgimgs) {
     document.bgimgs = [];
-    document.bgimgs[0] = '/pic/bg0.jpg';
-    document.bgimgs[1] = '/pic/bg1.jpg';
-    document.bgimgs[2] = '/pic/bg2.jpg';
-    document.bgimgs[3] = '/pic/bg5.jpg';
+    document.bgimgs[0] = 'pic/bg0.jpg';
+    document.bgimgs[1] = 'pic/bg1.jpg';
+    document.bgimgs[2] = 'pic/bg2.jpg';
+    document.bgimgs[3] = 'pic/bg5.jpg';
 }
 
 function shuffle(array) {

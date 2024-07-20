@@ -33,11 +33,11 @@ Reasons you should use Rust:
 
 When you are writing compiling rust code:
 
-<img src="../lab/crab1.png"></img>
+<img src="$url(lab/crab1.png)"></img>
 
 When you see 100 errors:
 
-<img src="../lab/crab2.png"></img>
+<img src="$url(lab/crab2.png)"></img>
 
 ## Mindset
 

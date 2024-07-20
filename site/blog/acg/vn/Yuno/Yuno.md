@@ -2,7 +2,7 @@
 title: この世の果てで恋を唄う少女YU-NO
 date: 2022-05-30 18:32:56
 custombg:
-  - ../bg.png
+  - $url(bg.png)
 categories:
   - VN
 tags:

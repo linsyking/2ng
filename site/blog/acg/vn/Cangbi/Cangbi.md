@@ -2,7 +2,7 @@
 title: 蒼の彼方のフォーリズム
 date: 2022-04-21 23:32:56
 custombg:
-  - ../misaki.png
+  - $url(misaki.png)
 categories:
   - VN
 tags:

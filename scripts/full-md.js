@@ -129,13 +129,27 @@ var jyml = require('js-yaml');
 const { argv } = require('process');
 var input = fs.readFileSync(argv[2]).toString();
 
+// Change URL
+
+const BASE_URL = "";
+
+const url_reg = /\$url\((.*?)\)/;
+
+input = input.replace(url_reg, function (_, p) {
+    if (p.startsWith("/")) {
+        return BASE_URL + p;
+    } else {
+        return "../" + p;
+    }
+});
+
 const reg = /^---\n([\s\S]*?)---\n/;
 let opts = {
     schema: jyml.JSON_SCHEMA
 };
 let has_changed = false;
 const new_s = input.replace(reg, function (_, p1) {
-    if(has_changed){
+    if (has_changed) {
         return p1;
     }
     has_changed = true;
@@ -197,7 +211,7 @@ tags:
 ---\n\n`;
     new_content += input;
     fs.writeFileSync(argv[2], new_content);
-}else {
+} else {
     var res = md.render(new_s);
     console.log(res)
 }

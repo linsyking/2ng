@@ -2,7 +2,7 @@
 title: 穢翼のユースティア
 date: 2022-05-04 14:21:05
 custombg:
-  - ../bg.jpg
+  - $url(bg.jpg)
 tags:
   - VN
   - life_death
