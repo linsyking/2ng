@@ -63,6 +63,9 @@ function compressPath(path) {
 window.onload = () => {
   changePicture();
 
+  if (location.pathname.startsWith("/blog/tag")) {
+    return;
+  }
   const gitalk = new Gitalk({
     clientID: "62f26ddc20e6f5a80420",
     clientSecret: "047e8e4fe5160c3a6bae00f33257abd81a258bdb",
