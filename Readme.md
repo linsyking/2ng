@@ -12,10 +12,25 @@ This new SSG is much faster.
 
 `Javascript` is slow, but currently the markdown parsing pipeline has special dependencies on it.
 
-I may want to replace it with a faster parser in the future.
-
-- NodeJS (`markdown-it`): run `pnpm i` after clone
+- NodeJS: run `pnpm i` after clone
 - [soupault](https://soupault.app/)
 - highlight
-- rust
+- ipe
 - convert (imagemagick)
+- make
+
+To build, run:
+
+```bash
+soupault
+```
+
+or
+
+```bash
+make dev
+```
+
+to listen changes.
+
+Note that bulding process may require internet connection (ipe renderer).
