@@ -133,7 +133,12 @@ const reg = /^---\n([\s\S]*?)---\n/;
 let opts = {
     schema: jyml.JSON_SCHEMA
 };
+let has_changed = false;
 const new_s = input.replace(reg, function (_, p1) {
+    if(has_changed){
+        return p1;
+    }
+    has_changed = true;
     let pp1 = jyml.load(p1, opts);
     if (!pp1.categories) {
         pp1.categories = []
@@ -180,6 +185,20 @@ const new_s = input.replace(reg, function (_, p1) {
     return pp;
 });
 
-var res = md.render(new_s);
+if (input.length == 0) {
+    console.error("Warning: empty input, initialising new post");
+    let dt = new Date();
+    let ftdt = `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, '0')}-${dt.getDate().toString().padStart(2, '0')} ${dt.getHours().toString().padStart(2, '0')}:${dt.getMinutes().toString().padStart(2, '0')}:${dt.getSeconds().toString().padStart(2, '0')}`;
+    let new_content = `---
+title: XXX
+date: ${ftdt}
+tags:
+  - 
+---\n\n`;
+    new_content += input;
+    fs.writeFileSync(argv[2], new_content);
+}else {
+    var res = md.render(new_s);
+    console.log(res)
+}
 
-console.log(res)
