@@ -1,4 +1,4 @@
-# Blog
+# Blog Archive
 
 [Atom feeds](atom.xml)
 
