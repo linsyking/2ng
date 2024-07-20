@@ -2,7 +2,7 @@
 title: 完美犯罪
 date: 2024-05-23 20:16:18
 tags:
-  - games
+  - game
   - mystery
 ---
 

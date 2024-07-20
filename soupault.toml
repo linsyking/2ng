@@ -239,7 +239,7 @@
   include_subsections = true
 
   # ...but not in blog/index.html
-  exclude_path_regex = "(.*)/index(.*)"
+  exclude_path_regex = "blog/tag/*"
 
   # Insert the reading time container right after the post title in <h1>
   action = "append_child"
