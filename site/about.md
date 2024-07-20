@@ -90,8 +90,8 @@ This static website is powered by [soupault](https://soupault.app/).
 
 On this blog, there will be: <fn>Copied from https://fkfd.me/about/#pledge-of-ethics</fn>
 
-- no advertisements
-- no analytics or trackers
-- no required JavaScript, if any
-- no ChatGPT-written articles
+- No advertisements
+- No analytics or trackers
+- All JS usages are Gitalk and background image setter
+- No ChatGPT-written articles
 
