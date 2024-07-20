@@ -1,6 +1,8 @@
 ---
 title: ACGN
 date: 2022-01-04 18:49:37
+custombg:
+  - /pic/bg3.jpg
 tags:
   - intro
 ---

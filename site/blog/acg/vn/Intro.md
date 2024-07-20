@@ -1,6 +1,8 @@
 ---
 title: VN Introduction
 date: 2022-04-20 23:10:04
+custombg:
+  - /pic/bg4.jpg
 tags:
   - VN
 ---

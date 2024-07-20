@@ -6,10 +6,10 @@ if (!document.bgimgs) {
     document.bgimgs[0] = '/pic/bg0.jpg';
     document.bgimgs[1] = '/pic/bg1.jpg';
     document.bgimgs[2] = '/pic/bg2.jpg';
-    document.bgimgs[3] = '/pic/bg3.jpg';
-    document.bgimgs[4] = '/pic/bg4.jpg';
+    // document.bgimgs[3] = '/pic/bg3.jpg';
+    // document.bgimgs[4] = '/pic/bg4.jpg';
     document.bgimgs[5] = '/pic/bg5.jpg';
-    document.bgimgs[6] = '/pic/bg6.jpg';
+    // document.bgimgs[6] = '/pic/bg6.jpg';
 }
 
 function shuffle(array) {

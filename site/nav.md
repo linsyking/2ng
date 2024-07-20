@@ -17,6 +17,8 @@ No translation. All texts are Chinese.
 
 ### Animations
 
+- [Anime Intro](/blog/acg/anime/Intro/)
+
 ### Games
 
 - [VN Intro](/blog/acg/vn/Intro/)

@@ -97,10 +97,10 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  background-color: white;
+  background-color: var(--Pre-bg);
   opacity: 0.95;
-  border: 1px solid #BFBFBF;
-  box-shadow: 0px 0px 5px 3px #aaaaaa;
+  border: 1px solid var(--Pre-border);
+  box-shadow: 0px 0px 5px 3px var(--Pre-border);
 
 }
 
@@ -355,14 +355,14 @@ pre code {
   margin: 1rem 0;
 }
 .custom-block.tip {
-  background-color: #f3f5f7;
-  border-color: #42b983;
-  color: #215d42;
+  background-color: var(--Canvas-bg);
+  /* border-color: var(--Pre-border); */
+  color: var(--Code-color);
 }
 .custom-block.warning {
-  background-color: #fff7d0;
-  border-color: #e7c000;
-  color: #6b5900;
+  background-color: var(--Canvas-bg);
+  /* border-color: #e7c000; */
+  color: var(--Highlight-num);
 }
 .custom-block.warning .custom-block-title {
   color: #b29400;
@@ -371,9 +371,9 @@ pre code {
   color: #004050;
 }
 .custom-block.danger {
-  background-color: #ffe6e6;
+  background-color: var(--Canvas-bg);
   border-color: #c00;
-  color: #4d0000;
+  color: var(--Highlight-str);
 }
 .custom-block.danger .custom-block-title {
   color: #900;
@@ -391,9 +391,9 @@ pre code {
   margin: 1rem 0;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  background-color: #dff0d8;
-  color: #3c763d;
-  border-color: #d6e9c6;
+  background-color: var(--Pre-bg);
+  color: var(--Highlight-str);
+  border-color: var(--Pre-border);
 }
 
 .custom-block.success .title {
@@ -406,9 +406,9 @@ pre code {
   margin: 1rem 0;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  background-color: #d9edf7;
-  color: #31708f;
-  border-color: #bce8f1;
+  background-color: var(--Canvas-bg);
+  color: var(--Accent2-color);
+  border-color: var(--Pre-border);
 }
 
 .custom-block.info .title {
