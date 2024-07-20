@@ -2,7 +2,6 @@
 
 # Navigation
 
-
 ## Random Posts
 
 - [Testing post](/blog/test/)

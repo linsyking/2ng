@@ -11,9 +11,9 @@
 I have many internet identities, but "Linsy" is the commonest one I used.
 
 I was born in Shanghai, and is currently living in Bengbu.
-Meanwhile, I am studying at a US university in a *very* cold place.
+Meanwhile, I am studying at a US university in a _very_ cold place.
 
-What languages I speak doesn't matter, you can use *any* language to contact with me.
+What languages I speak doesn't matter, you can use _any_ language to contact with me.
 
 ## Contact
 
@@ -51,8 +51,8 @@ Probably will study maths some time in the future...
 
 I play platform games, visual novels and anything creative!
 
-- I play [Celeste](https://en.wikipedia.org/wiki/Celeste_(video_game)) speedrun
-- I play visual novel games *a lot*, part of them are on my vndb list
+- I play [Celeste](<https://en.wikipedia.org/wiki/Celeste_(video_game)>) speedrun
+- I play visual novel games _a lot_, part of them are on my vndb list
 
 See my VN blog posts for more information.
 
@@ -87,11 +87,9 @@ This static website is powered by [soupault](https://soupault.app/).
 
 ### Pledge of ethics
 
-
 On this blog, there will be: <fn>Copied from https://fkfd.me/about/#pledge-of-ethics</fn>
 
 - No advertisements
 - No analytics or trackers
 - All JS usages are Gitalk and background image setter
 - No ChatGPT-written articles
-

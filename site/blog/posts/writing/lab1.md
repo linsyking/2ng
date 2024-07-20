@@ -8,14 +8,15 @@ tags:
 ---
 
 :::tip Objectives
+
 - Use `cargo`
 - Ownership, borrowing, lifetime
 - Traits
 - Closures
 - Vectors, Strings, Iterators
-:::
+  :::
 
-*Rust is like C, and unlike C.*
+_Rust is like C, and unlike C._
 
 ---
 
@@ -225,10 +226,11 @@ If you don't use cyclic `Rc`s, you'd probably not encounter memory leak though.
 :::
 
 :::info Ownership Rules
+
 1. Each value in Rust has an owner.
 2. There can only be one owner at a time.
 3. When the owner goes out of **scope**, the value will be dropped.
-:::
+   :::
 
 There are many ways to transfer ownership. For example,
 
@@ -266,12 +268,11 @@ $$
 \mathsf{Typ}\, \tau := \cdots | \& \tau | \& \mathsf{mut} \, \tau
 $$
 
-
 $$
 \mathsf{Exp}\, e := \cdots | \& e | \& \mathsf{mut} \, e | *e
 $$
 
-References are *borrowing* values from its owner.
+References are _borrowing_ values from its owner.
 
 > As in real life, if a person owns something, you can borrow it from them. When you’re done, you have to give it back. You don’t own it.
 
@@ -298,7 +299,7 @@ fn dangle() -> &String {
 
 In Rust, you may find that there are two kinds of strings: `&str` and `String`. Why do we need two?
 
-Under the hood, strings can be modeled by *an array of chars*. A char is a new type that is stored as `u8`.
+Under the hood, strings can be modeled by _an array of chars_. A char is a new type that is stored as `u8`.
 
 Therefore, we may first need to understand the difference between `Vec<T>` (`String`) and `&[T]` (`&str`).
 
@@ -341,7 +342,6 @@ The array data type is now added to our `Typ` and `Exp`:
 $$
 \mathsf{Typ}\, \tau := \cdots | [\tau ; \underline{n}]
 $$
-
 
 $$
 \mathsf{Exp}\, e := \cdots | [e_1, \cdots, e_n] | e[\underline{n}] | e[\underline{n_1}..\underline{n_2}] | e[\underline{n_1}..=\underline{n_2}]
@@ -404,10 +404,9 @@ We know that in a program, the lifetime of all variables is a **continuous** reg
 `'a: 'b` (`'a` subtypes `'b`) if and only if `'a` **completely contains** `'b`.
 :::
 
+We note that if `'a: 'b`, then `&'a: 'b`. This is called _covariant_.
 
-We note that if `'a: 'b`, then `&'a: 'b`. This is called *covariant*.
-
-However, if `'a: 'b`, then we cannot infer `&'a mut: &'b mut` and also no `&'b mut: &'a mut` (Why?). This is called *invariant*.
+However, if `'a: 'b`, then we cannot infer `&'a mut: &'b mut` and also no `&'b mut: &'a mut` (Why?). This is called _invariant_.
 
 ## Containers
 

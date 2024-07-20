@@ -125,7 +125,7 @@ Named pipes in Unix OS are not bi-directional.
 
 ### UNIX syscalls we need
 
-*(The syscall name may not be exactly the same as below)*
+_(The syscall name may not be exactly the same as below)_
 
 - `fork`: used to fork a process
 - `exec`: run a new process image in the current process

@@ -1,4 +1,5 @@
 #!/bin/bash
+soupault
 while true; do
 
 inotifywait -e modify,create,delete,move -r ./site && \

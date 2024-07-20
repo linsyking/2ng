@@ -9,8 +9,11 @@ endif
 dev:
 	./watch
 
+fmt:
+	pnpm exec prettier . --write
+
 clean:
 	rm -rf build
 	rm -rf .soupault-cache
 
-.PHONY: clean
+.PHONY: clean dev fmt

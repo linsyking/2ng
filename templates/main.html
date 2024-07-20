@@ -6,28 +6,26 @@
     then saves modified HTML to a static page.
   -->
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Non-page files from the site/ dir are simply copied unchanged. -->
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/main.js"></script>
 
-  <!-- Non-page files from the site/ dir are simply copied unchanged. -->
-  <link rel="stylesheet" href="/style.css">
-  <script src="/main.js"></script>
+    <!-- Page title is set by the title widget based on its heading -->
+    <title> </title>
+  </head>
 
-  <!-- Page title is set by the title widget based on its heading -->
-  <title> </title>
-</head>
-
-<body>
-  <main>
-    <!--
+  <body>
+    <main>
+      <!--
         Page content is inserted here.
         It can be inserted inside any element identifiable with a CSS3 selector,
         see the settings.default_content_selector option.
       -->
-  </main>
-  <div id="gitalk-container"></div>
-</body>
-
+    </main>
+    <div id="gitalk-container"></div>
+  </body>
 </html>

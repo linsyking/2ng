@@ -12,7 +12,7 @@ tags:
 ---
 
 > 游戏全名： さくら、もゆ。-as the Night's, Reincarnation-
-> 
+>
 > 开发： Favourite
 
 阅读时间：2022年10月13日晚开始，？全通

@@ -15,7 +15,7 @@ We can create a GitHub **public** repository and upload the encrypted homework b
 You may also replace GitHub with any big social media, like Twitter or Instagram.
 :::
 
-In this example, Github acts as an *authority* that both students and teachers trust.
+In this example, Github acts as an _authority_ that both students and teachers trust.
 
 :::center
 <img src="$url(svg/authority2.png)" width="50%"/>
@@ -31,12 +31,12 @@ However, there are some problems:
 Here is the problem:
 
 ::::info Problem Description
-**The Late Homework Problem.** John is a student (*Prover*) and Peter is John's teacher (*Verifier*). Peter has many students and John is only one of them. Peter released some homework but he needed to leave campus for a while so he cannot grade students' homework. Peter wants his students to finish homework before due (during his leave) and when he came back, all students can prove to Peter that they finished their homework before due. However, there are some restrictions regarding how students can prove their homework finishing time:
+**The Late Homework Problem.** John is a student (_Prover_) and Peter is John's teacher (_Verifier_). Peter has many students and John is only one of them. Peter released some homework but he needed to leave campus for a while so he cannot grade students' homework. Peter wants his students to finish homework before due (during his leave) and when he came back, all students can prove to Peter that they finished their homework before due. However, there are some restrictions regarding how students can prove their homework finishing time:
 
 - Homework is individual, no communication is allowed between students
 - Students cannot communicate with Peter during his leave
 
-John soon realized that it was impossible to prove without an external authority. He discussed with Peter and Peter allowed students to use an authority on the Internet provided by *you*. However, the authority must follow some rules:
+John soon realized that it was impossible to prove without an external authority. He discussed with Peter and Peter allowed students to use an authority on the Internet provided by _you_. However, the authority must follow some rules:
 
 - Students **cannot send anything** to the authority, except for sending some `GET` requests anonymously. The get requests headers cannot contain any information except a session id the server returns
 - The server (authority) HTTP session policy: generate a unique session id to every time the user requests, and expire it in a few minutes (e.g. 5 minutes)
@@ -68,6 +68,7 @@ The authority has a **secret** bijection between server time (in milliseconds) w
 $$
 f_s: \mathsf{Time} \times \mathsf{SessionID} \rightarrow \mathsf{String}\\
 $$
+
 $$
 g_s = f_s^{-1}
 $$

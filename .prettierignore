@@ -1,0 +1,4 @@
+# Ignore artifacts:
+build
+.soupault-cache
+node_modules
