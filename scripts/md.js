@@ -150,11 +150,9 @@ var input = fs.readFileSync(argv[2]).toString();
 
 // Change URL
 
-const BASE_URL = "";
-
 input = input.replaceAll(/\$url\((.*?)\)/g, function (_, p) {
   if (p.startsWith("/")) {
-    return BASE_URL + p;
+    return p;
   } else {
     return "../" + p;
   }
