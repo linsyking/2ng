@@ -28,5 +28,5 @@ No translation. All texts are Chinese.
 
 ## Collections & Tools
 
-- [Friends](/blog/posts/collections/Friends/)
-- [Useful links](/blog/posts/collections/Links/)
+- [Friends](/blog/posts/collection/Friends/)
+- [Useful links](/blog/posts/collection/Links/)
