@@ -102,8 +102,8 @@ p1 | p2
 ```
 
 :::center
-<img src="$url(lab/p2.png)" style="width:60%" />
-<img src="$url(lab/p2s.png)"  style="width:70%; margin-top: 3rem" />
+<img src="$url(lab/p2.png)" style="width:60%"  class="color-invertible"/>
+<img src="$url(lab/p2s.png)"  style="width:70%; margin-top: 3rem"  class="color-invertible"/>
 :::
 
 ```sh
@@ -111,8 +111,8 @@ p1 | p2 | p3
 ```
 
 :::center
-<img src="$url(lab/p3.png)" style="width:80%" />
-<img src="$url(lab/p3s.png)"  style="width:85%; margin-top: 3rem" />
+<img src="$url(lab/p3.png)" style="width:80%"  class="color-invertible"/>
+<img src="$url(lab/p3s.png)"  style="width:85%; margin-top: 3rem"  class="color-invertible"/>
 :::
 
 ### Named pipes

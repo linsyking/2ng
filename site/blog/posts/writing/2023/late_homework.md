@@ -18,7 +18,7 @@ You may also replace GitHub with any big social media, like Twitter or Instagram
 In this example, Github acts as an _authority_ that both students and teachers trust.
 
 :::center
-<img src="$url(svg/authority2.png)" width="50%"/>
+<img src="$url(svg/authority2.png)" width="50%" class="color-invertible"/>
 :::
 
 However, there are some problems:
@@ -50,7 +50,7 @@ John soon realized that it was impossible to prove without an external authority
 We need to design the authority server and give it to Peter. How can we design it so that John could prove that he did his homework before due and Peter could verify his statement (with low P value)?
 
 :::center
-<img src="$url(svg/authority1.png)" width="40%"/>
+<img src="$url(svg/authority1.png)" width="40%" class="color-invertible"/>
 :::
 ::::
 

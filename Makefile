@@ -5,9 +5,6 @@ endif
 ifeq "${TOOL}" "IPE"
 	iperender -png -resolution 200 -transparent ${SRC} ${DST}
 endif
-ifeq "${TOOL}" "JS"
-	node scripts/js.js ${SRC} > ${DST}
-endif
 
 dev:
 	./watch

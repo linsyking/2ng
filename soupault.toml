@@ -65,9 +65,9 @@
   # site_subtitle = "2-ng"
 
 [asset_processors]
-  svg = "SRC={{source_file_path}} DST={{target_dir}}/{{source_file_base_name}}.png TOOL=SVG make"
-  ipe = "SRC={{source_file_path}} DST={{target_dir}}/{{source_file_base_name}}.png TOOL=IPE make"
-  # js = "SRC={{source_file_path}} DST={{target_dir}}/{{source_file_base_name}}.js TOOL=JS make"
+  ipe = "SRC={{source_file_path}} DSTB={{target_dir}}/{{source_file_base_name}} DST=$DSTB.png TOOL=IPE make $DST"
+  svg = "SRC={{source_file_path}} DSTB={{target_dir}}/{{source_file_base_name}} DST=$DSTB.png TOOL=SVG make $DST"
+  # js = "SRC={{source_file_path}} DST={{target_dir}}/{{source_file_base_name}} TOOL=JS make"
 
 [preprocessors]
   # Automatically call pandoc on every *.md page to convert it to HTML

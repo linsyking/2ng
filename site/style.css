@@ -64,6 +64,12 @@
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .color-invertible {
+      filter: invert(100%);
+  }
+}
+
 /** Fixups */
 
 /* Avoid elements wider than screen on mobile */
