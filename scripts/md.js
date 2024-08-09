@@ -141,12 +141,17 @@ var mdit = require("markdown-it"),
     })
     .use(emoji);
 
+function format_dt(dt) {
+  return `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, "0")}-${dt.getDate().toString().padStart(2, "0")} ${dt.getHours().toString().padStart(2, "0")}:${dt.getMinutes().toString().padStart(2, "0")}:${dt.getSeconds().toString().padStart(2, "0")}`;
+}
+
 var fs = require("fs");
 var jyml = require("js-yaml");
 
 // Read file arg[2] to string
 const { argv } = require("process");
-var input = fs.readFileSync(argv[2]).toString();
+const fpath = argv[2];
+var input = fs.readFileSync(fpath).toString();
 
 // Change URL
 
@@ -184,9 +189,11 @@ const new_s = input.replace(/^---\n([\s\S]*?)---\n/, function (_, p1) {
     console.error("Error: no title or date");
     process.exit(1);
   }
+  let lmd_time = format_dt(fs.statSync(fpath).mtime);
   let pp = `<post-metadata>
 <post-title>${pp1.title}</post-title>
-<post-date>${pp1.date}</post-date>
+<post-date>${lmd_time}</post-date>
+<post-initdate>${pp1.date}</post-initdate>
 <post-tags>${uniq_tags.join(", ")}</post-tags>
 </post-metadata>`;
   let toc = false;
@@ -214,16 +221,14 @@ const new_s = input.replace(/^---\n([\s\S]*?)---\n/, function (_, p1) {
 
 if (input.length == 0) {
   console.error("Warning: empty input, initialising new post");
-  let dt = new Date();
-  let ftdt = `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, "0")}-${dt.getDate().toString().padStart(2, "0")} ${dt.getHours().toString().padStart(2, "0")}:${dt.getMinutes().toString().padStart(2, "0")}:${dt.getSeconds().toString().padStart(2, "0")}`;
   let new_content = `---
 title: XXX
-date: ${ftdt}
+date: ${format_dt(new Date())}
 tags:
   - 
 ---\n\n`;
   new_content += input;
-  fs.writeFileSync(argv[2], new_content);
+  fs.writeFileSync(fpath, new_content);
 } else {
   var res = md.render(new_s);
   console.log(res);

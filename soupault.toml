@@ -93,6 +93,7 @@
   title = { selector = ["#post-title", "h1"] }
   excerpt = { selector = ["#post-excerpt", "p"] }
   date = { selector = ["#post-date", "time"] }
+  initdate = { selector = ["#post-initdate", "time"] }
   tags = { selector = ".post-tag", select_all = true }
 
   reading_time = { selector = "#reading-time" }
@@ -111,6 +112,9 @@
     <h2><a href="{{e.url}}">{{e.title}}</a></h2>
     {% if e.date %}
     <div><strong>Last update:</strong> {{e.date}}</div>
+    {% endif %}
+    {% if e.initdate %}
+    <div><strong>Publish date:</strong> {{e.initdate}}</div>
     {% endif %}
     {% if e.tags %}
     <div class="post-tags">
@@ -209,6 +213,9 @@
       <h1 id="post-title">{{title}}</h1>
       {% if date %}
       <div><strong>Last update:</strong> <time id="post-date" datetime="{{date}}">{{date}}</time></div>
+      {% endif %}
+      {% if initdate %}
+      <div><strong>Publish date:</strong> <time id="post-initdate" datetime="{{initdate}}">{{initdate}}</time></div>
       {% endif %}
       {% if tags %}
         <div class="post-tags">
