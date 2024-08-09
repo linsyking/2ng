@@ -85,6 +85,8 @@ This blog is migrated from my old blog built with Vue, Vuepress and [vdoing](htt
 
 This static website is powered by [soupault](https://soupault.app/).
 
+View [changelog](/changelog).
+
 ### Pledge of ethics
 
 On this blog, there will be: <fn>Copied from https://fkfd.me/about/#pledge-of-ethics</fn>

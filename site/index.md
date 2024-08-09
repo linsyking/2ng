@@ -4,6 +4,8 @@ Hi, I'm Linsy (he/him), a person with many interests. I like computer science, m
 
 This is a blog for sharing fun stuffs, reviews of books & games.
 
+[Blog changelog](/changelog)
+
 <h2 id="latest-entries-header">Latest posts</h2>
 
 <div id="latest-blog-entries">
