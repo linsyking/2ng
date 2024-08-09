@@ -63,7 +63,11 @@ function compressPath(path) {
 window.onload = () => {
   changePicture();
 
-  if (location.pathname.startsWith("/blog/tag") || location.pathname == "/blog/" || location.pathname == "/changelog/") {
+  if (
+    location.pathname.startsWith("/blog/tag") ||
+    location.pathname == "/blog/" ||
+    location.pathname == "/changelog/"
+  ) {
     return;
   }
   const gitalk = new Gitalk({
