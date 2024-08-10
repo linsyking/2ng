@@ -190,9 +190,11 @@ const new_s = input.replace(/^---\n([\s\S]*?)---\n/, function (_, p1) {
     console.error("Error: no title or date");
     process.exit(1);
   }
-  let date_num = Number(cp.execSync(`git log -1 --format=%ct ${fpath}`).toString());
+  let date_num = Number(
+    cp.execSync(`git log -1 --format=%ct ${fpath}`).toString(),
+  );
   let date_str = "";
-  if(date_num != 0) {
+  if (date_num != 0) {
     let lmd_date = new Date(date_num * 1000);
     date_str = `<post-date>${format_dt(lmd_date)}</post-date>`;
   }
