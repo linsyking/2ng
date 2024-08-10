@@ -42,6 +42,6 @@ jobs:
         run: pnpm install -g netlify-cli
       - name: Deploy to Netlify
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: netlify deploy --dir build --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
