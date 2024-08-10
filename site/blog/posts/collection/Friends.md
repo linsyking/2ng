@@ -15,6 +15,7 @@ tags:
 ## English blog
 
 - https://fkfd.me/ - He is a great comics artist. He also has many very funny posts. Very recommended
+- https://keke1022.site/ - My friend's blog for his courses
 
 ## Japanese
 
