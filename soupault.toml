@@ -92,8 +92,8 @@
 [index.fields]
   title = { selector = ["#post-title", "h1"] }
   excerpt = { selector = ["#post-excerpt", "p"] }
-  date = { selector = ["#post-date", "time"] }
-  initdate = { selector = ["#post-initdate", "time"] }
+  date = { selector = ["#post-date"] }
+  initdate = { selector = ["#post-initdate"] }
   tags = { selector = ".post-tag", select_all = true }
 
   reading_time = { selector = "#reading-time" }

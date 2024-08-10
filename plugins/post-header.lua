@@ -109,6 +109,22 @@ else
   HTML.set_tag_name(post_date, "time")
 end
 
+
+-- Extract and clean up the <post-initdate> element
+post_initdate = HTML.select_one(page, "post-initdate")
+post_initdatetime = HTML.get_attribute(post_initdate, "datetime")
+if post_initdatetime then
+  env["initdate"] = post_initdatetime
+else
+  env["initdate"] = HTML.inner_html(post_initdate)
+end
+
+if is_bare(post_initdate) then
+  HTML.delete(post_initdate)
+else
+  HTML.set_tag_name(post_initdate, "time")
+end
+
 -- Extract and clean up the <post-tags> element
 -- It's supposed to look like <post-tags>foo, bar, baz</post-tags>
 -- We extract the tags string and split it into individual tags
