@@ -21,10 +21,4 @@ build:
 	rm -rf build/main.js
 	soupault --verbose
 
-deploy:
-	zip -r h.zip build
-	expect scripts/up.sh
-	expect scripts/in.sh
-	rm h.zip
-
 .PHONY: clean dev fmt build
