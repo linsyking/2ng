@@ -20,6 +20,14 @@ jobs:
           version: latest
       - name: Install softwatre dependencies
         run: sudo apt-get install -y highlight imagemagick make ipe
+      - name: Install soupault
+        env:
+            SOUPAULT_VERSION: 4.10.0
+        run: |
+            echo Downloading and unpacking soupault
+            wget https://github.com/PataphysicalSociety/soupault/releases/download/$SOUPAULT_VERSION/soupault-$SOUPAULT_VERSION-linux-x86_64.tar.gz
+            tar xvf soupault-$SOUPAULT_VERSION-linux-x86_64.tar.gz
+            sudo mv -v ./soupault-$SOUPAULT_VERSION-linux-x86_64/soupault /usr/bin/
       - name: Install pnpm dependencies
         run: pnpm i
       - name: Check formatting
