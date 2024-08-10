@@ -19,7 +19,7 @@ clean:
 build:
 	rm -rf .soupault-cache
 	rm -rf build/main.js
-	soupault
+	soupault --verbose
 
 deploy:
 	zip -r h.zip build
