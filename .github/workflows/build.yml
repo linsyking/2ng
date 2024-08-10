@@ -28,7 +28,7 @@ jobs:
           wget https://github.com/PataphysicalSociety/soupault/releases/download/$SOUPAULT_VERSION/soupault-$SOUPAULT_VERSION-linux-x86_64.tar.gz
           tar xvf soupault-$SOUPAULT_VERSION-linux-x86_64.tar.gz
           sudo mv -v ./soupault-$SOUPAULT_VERSION-linux-x86_64/soupault /usr/bin/
-          rm -rf ./soupault*
+          rm -rf soupault-$SOUPAULT_VERSION-linux-x86_64.tar.gz soupault-$SOUPAULT_VERSION-linux-x86_64
       - name: Install pnpm dependencies
         run: pnpm i
       - name: Check formatting
