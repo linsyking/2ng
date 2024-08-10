@@ -83,7 +83,7 @@
 
   extract_after_widgets = ['insert-reading-time', 'make-post-header']
 
-  sort_by = "date"
+  sort_by = "initdate"
 
   # A directory with a .leaf file in it is treated as hand-made "clean URL",
   # rather than a section.
@@ -145,6 +145,8 @@
 
   section = "blog"
   include_subsections = true
+
+  sort_by = "date"
 
   # In this case index_template is a soupault built-in
   index_template = """

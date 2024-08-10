@@ -147,6 +147,7 @@ function format_dt(dt) {
 
 var fs = require("fs");
 var jyml = require("js-yaml");
+var cp = require("child_process");
 
 // Read file arg[2] to string
 const { argv } = require("process");
@@ -189,12 +190,14 @@ const new_s = input.replace(/^---\n([\s\S]*?)---\n/, function (_, p1) {
     console.error("Error: no title or date");
     process.exit(1);
   }
-  let lmd_time = format_dt(fs.statSync(fpath).mtime);
+  let date_num = Number(cp.execSync(`git log -1 --format=%ct ${fpath}`).toString());
+  let date_str = "";
+  if(date_num != 0) {
+    let lmd_date = new Date(date_num * 1000);
+    date_str = `<post-date>${format_dt(lmd_date)}</post-date>`;
+  }
   let pp = `<post-metadata>
-<post-title>${pp1.title}</post-title>
-<post-date>${lmd_time}</post-date>
-<post-initdate>${pp1.date}</post-initdate>
-<post-tags>${uniq_tags.join(", ")}</post-tags>
+<post-title>${pp1.title}</post-title>${date_str}<post-initdate>${pp1.date}</post-initdate><post-tags>${uniq_tags.join(", ")}</post-tags>
 </post-metadata>`;
   let toc = false;
   if (pp1.toc) {
