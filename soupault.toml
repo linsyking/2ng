@@ -53,7 +53,7 @@
   # If you want to generate Atom feeds, you will need to adjust the site metadata config below:
 
   # Required:
-  site_url = "https://blog.yydbxx.cn"
+  site_url = "https://2ngblog.netlify.app"
 
   # Optional but strongly recommended:
   site_author = "Linsy"
