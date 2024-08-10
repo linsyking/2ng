@@ -59,7 +59,7 @@
   site_author = "Linsy"
   site_author_email = "kxiang@umich.edu"
   site_title = "2-ng blog"
-  # site_logo = "https://example.com/~jrandomhacker/favicon.png"
+  # site_logo = ""
 
   # Completely optional: 
   # site_subtitle = "2-ng"
@@ -84,6 +84,8 @@
   extract_after_widgets = ['insert-reading-time', 'make-post-header']
 
   sort_by = "initdate"
+
+  date_formats = ["%Y-%m-%d %H:%M:%S"]
 
   # A directory with a .leaf file in it is treated as hand-made "clean URL",
   # rather than a section.
