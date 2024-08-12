@@ -1,8 +1,7 @@
 {
-  "name": "soupault-blueprints-blog",
+  "name": "soupault-blog",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "2ng blog",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
