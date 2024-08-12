@@ -1,7 +1,7 @@
 import { md } from "./md-it.mjs";
 import { readFileSync, writeFileSync } from "fs";
 import { execSync } from "child_process";
-import { argv } from "process";
+import { argv, env } from "process";
 import CryptoJS from "crypto-js";
 import jyml from "js-yaml";
 
@@ -105,7 +105,12 @@ tags:
   if (is_encrypted) {
     const no_pp = input.replace(/^---\n([\s\S]*?)---\n/, "");
     let res = md.render(no_pp);
-    const key = readFileSync(".key").toString();
+    let key = "";
+    if (env.SECRET_KEY) {
+      key = env.SECRET_KEY;
+    } else {
+      key = readFileSync(".key").toString();
+    }
     const encrypted = CryptoJS.AES.encrypt(res, key).toString();
     console.log(`${gen_pp}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

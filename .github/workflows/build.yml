@@ -40,6 +40,8 @@ jobs:
       - name: Check formatting
         run: pnpm exec prettier . --check
       - name: Build
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: make build
       - name: Install netlify tools
         run: pnpm install -g netlify-cli
