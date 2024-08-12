@@ -4,6 +4,7 @@
 
 ## 2024-08-11
 
+- Add secret post
 - Use `block` to render tags
 
 ## 2024-08-09
