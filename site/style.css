@@ -499,12 +499,6 @@ blockquote {
   background-color: var(--Pre-bg);
 }
 
-.post-tags {
-  align-items: center;
-  justify-content: flex-start;
-  display: flex;
-}
-
 .tag-container {
   width: fit-content;
   height: 25px;
@@ -513,7 +507,7 @@ blockquote {
   padding-inline: 5px;
   align-items: center;
   justify-content: center;
-  display: flex;
+  display: inline-flex;
   margin-inline: 5px;
   cursor: pointer;
 }

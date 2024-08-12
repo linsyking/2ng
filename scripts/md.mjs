@@ -1,5 +1,5 @@
 import { md } from "./md-it.mjs";
-import { readFileSync } from "fs";
+import { readFileSync, writeFileSync } from "fs";
 import { execSync } from "child_process";
 import { argv } from "process";
 import jyml from "js-yaml";
@@ -91,7 +91,7 @@ tags:
   - 
 ---\n\n`;
   new_content += input;
-  fs.writeFileSync(fpath, new_content);
+  writeFileSync(fpath, new_content);
 } else {
   var res = md.render(new_s);
   console.log(res);
