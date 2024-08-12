@@ -96,6 +96,7 @@
   excerpt = { selector = ["#post-excerpt", "p"] }
   date = { selector = ["#post-date"] }
   initdate = { selector = ["#post-initdate"] }
+  secret = { selector = ["#encrypted"] }
   tags = { selector = ".post-tag", select_all = true }
 
   reading_time = { selector = "#reading-time" }
@@ -111,7 +112,11 @@
   # Jingoo template for rendering extracted metadata
   index_template = """
     {% for e in entries %}
-    <h2><a href="{{e.url}}">{{e.title}}</a></h2>
+    <h2><a href="{{e.url}}">{{e.title}}</a>
+    {% if e.secret %}
+    <strong>*</strong>
+    {% endif %}
+    </h2>
     {% if e.date %}
     <div><strong>Last update:</strong> {{e.date}}</div>
     {% endif %}
@@ -232,8 +237,12 @@
           </div>
           </a>
          {%- endfor -%}
-         </div>
-        {% endif %}
+        </div>
+      {% endif %}
+
+      {% if secret %}
+      <div><strong id="encrypted">This is a secret post.</strong></div>
+      {% endif %}
     </div>
 '''
 

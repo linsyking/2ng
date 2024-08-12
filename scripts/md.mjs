@@ -2,6 +2,7 @@ import { md } from "./md-it.mjs";
 import { readFileSync, writeFileSync } from "fs";
 import { execSync } from "child_process";
 import { argv } from "process";
+import CryptoJS from "crypto-js";
 import jyml from "js-yaml";
 
 function format_dt(dt) {
@@ -21,6 +22,9 @@ input = input.replaceAll(/\$url\((.*?)\)/g, function (_, p) {
   }
 });
 
+let is_encrypted = false;
+let gen_pp = "";
+
 let opts = {
   schema: jyml.JSON_SCHEMA,
 };
@@ -39,6 +43,10 @@ const new_s = input.replace(/^---\n([\s\S]*?)---\n/, function (_, p1) {
   }
   let tags = pp1.categories.concat(pp1.tags);
   let uniq_tags = [...new Set(tags)];
+
+  if (pp1.secret) {
+    is_encrypted = pp1.secret;
+  }
 
   if (uniq_tags.length == 0) {
     console.error("Warning: empty tag list");
@@ -79,6 +87,7 @@ const new_s = input.replace(/^---\n([\s\S]*?)---\n/, function (_, p1) {
     }
   }
   pp += "\n";
+  gen_pp = pp;
   return pp;
 });
 
@@ -93,6 +102,17 @@ tags:
   new_content += input;
   writeFileSync(fpath, new_content);
 } else {
-  var res = md.render(new_s);
-  console.log(res);
+  if (is_encrypted) {
+    const no_pp = input.replace(/^---\n([\s\S]*?)---\n/, "");
+    let res = md.render(no_pp);
+    const key = readFileSync(".key").toString();
+    const encrypted = CryptoJS.AES.encrypt(res, key).toString();
+    console.log(`${gen_pp}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/decrypt.js"></script>
+<encrypted data="${encrypted}" />`);
+  } else {
+    let res = md.render(new_s);
+    console.log(res);
+  }
 }

@@ -125,6 +125,12 @@ else
   HTML.set_tag_name(post_initdate, "time")
 end
 
+
+is_secret = HTML.select_one(page, "encrypted")
+if is_secret then
+  env["secret"] = is_secret
+end
+
 -- Extract and clean up the <post-tags> element
 -- It's supposed to look like <post-tags>foo, bar, baz</post-tags>
 -- We extract the tags string and split it into individual tags

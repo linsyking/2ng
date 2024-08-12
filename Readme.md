@@ -19,6 +19,12 @@ This new SSG is much faster.
 - convert (imagemagick)
 - make
 
+Set your personal password for secret posts:
+
+```bash
+echo mypassword > .key
+```
+
 To build, run:
 
 ```bash

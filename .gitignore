@@ -1,3 +1,4 @@
 build/
 .soupault-cache/
 node_modules/
+.key
