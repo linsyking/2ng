@@ -1,8 +1,6 @@
 ## Welcome!
 
-Hi, I'm Linsy (he/him), a person with many interests. I like computer science, maths, playing video games and reading novels. Have a look at the [About page](/about) if you want to know more about _me_.
-
-This is a blog for sharing fun stuffs, reviews of books & games.
+This is a sample blog.
 
 [Blog changelog](/changelog)
 
