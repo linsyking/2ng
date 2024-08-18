@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Check the size of a file
+
+size=$(wc -c <"$1")
+if [ $size -ge $(($2)) ]; then
+    exit 1
+fi

@@ -5,6 +5,12 @@ endif
 ifeq "${TOOL}" "IPE"
 	iperender -png -resolution 200 -transparent ${SRC} ${DST}
 endif
+ifeq "${TOOL}" "PNG"
+	scripts/checksize ${SRC} 150000
+endif
+ifeq "${TOOL}" "JPG"
+	scripts/checksize ${SRC} 150000
+endif
 
 dev:
 	./watch

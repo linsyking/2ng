@@ -67,6 +67,8 @@
 [asset_processors]
   ipe = "SRC={{source_file_path}} DSTB={{target_dir}}/{{source_file_base_name}} DST=$DSTB.png TOOL=IPE make $DST"
   svg = "SRC={{source_file_path}} DSTB={{target_dir}}/{{source_file_base_name}} DST=$DSTB.png TOOL=SVG make $DST"
+  png = "SRC={{source_file_path}} DSTB={{target_dir}}/{{source_file_base_name}} DST=$DSTB.png TOOL=PNG make $DST"
+  jpg = "SRC={{source_file_path}} DSTB={{target_dir}}/{{source_file_base_name}} DST=$DSTB.jpg TOOL=JPG make $DST"
   # js = "SRC={{source_file_path}} DST={{target_dir}}/{{source_file_base_name}} TOOL=JS make"
 
 [preprocessors]
