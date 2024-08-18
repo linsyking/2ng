@@ -56,7 +56,7 @@ const new_s = input.replace(/^---\n([\s\S]*?)---\n/, function (_, p1) {
     process.exit(1);
   }
   let date_num = Number(
-    execSync(`git log -1 --format=%ct ${fpath}`).toString(),
+    execSync(`git -C ../ log -1 --format=%ct -- ${fpath}`).toString(),
   );
   let date_str = "";
   if (date_num != 0) {
