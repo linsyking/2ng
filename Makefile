@@ -7,9 +7,11 @@ ifeq "${TOOL}" "IPE"
 endif
 ifeq "${TOOL}" "PNG"
 	scripts/checksize ${SRC} 150000
+	cp ${SRC} ${DST}
 endif
 ifeq "${TOOL}" "JPG"
 	scripts/checksize ${SRC} 150000
+	cp ${SRC} ${DST}
 endif
 
 dev:
