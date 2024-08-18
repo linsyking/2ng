@@ -2,6 +2,8 @@ import markdownit from "markdown-it";
 import math from "markdown-it-mathjax3";
 import container from "markdown-it-container";
 import emoji from "markdown-it-emoji";
+import { spoiler } from "@mdit/plugin-spoiler";
+import { figure } from "@mdit/plugin-figure";
 
 export const md = new markdownit({
   typographer: true,
@@ -9,6 +11,8 @@ export const md = new markdownit({
   html: true,
 })
   .use(math)
+  .use(spoiler)
+  .use(figure)
   .use(container, "details", {
     validate: function (params) {
       return params.trim().match(/^details\s*(.*)$/);

@@ -9,9 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mdit/plugin-figure": "^0.13.0",
+    "@mdit/plugin-spoiler": "^0.13.0",
     "crypto-js": "^4.2.0",
     "js-yaml": "^4.1.0",
-    "markdown-it": "^13.0.2",
+    "markdown-it": "^14.1.0",
     "markdown-it-container": "^3.0.0",
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-mathjax3": "^4.3.2"
