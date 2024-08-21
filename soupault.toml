@@ -269,22 +269,6 @@
 
   html = '<div><strong>Reading time:</strong> <span id="reading-time"></span></div>'
 
-# This widget comes from plugins/reading-time.lua
-# It calculates estimated reading time based on word count
-[widgets.insert-reading-time]
-  widget = "reading-time"
-  reading_speed = 100
-
-  # If this widget runs before "insert-reading-time-container",
-  # there will be nowhere to insert the reading time.
-  # This is why we explicitly schedule it to run after that widget.
-  after = "insert-reading-time-container"
-
-  selector = "#reading-time"
-
-  # The element where it looks for page "content"
-  content_selector = "main"
-
 # Inserts a table of contents generated from page headings
 [widgets.table-of-contents]
   #exclude_path_regex = '/index(.*)'
@@ -337,3 +321,10 @@
   widget = "preprocess_element"
   selector = '*[class^="language-"]'
   command = 'highlight -O html -f --syntax=$(echo $ATTR_CLASS | sed -e "s/language-//")'
+
+[widgets.insert-reading-time]
+  widget = "preprocess_element"
+  selector = 'main'
+  after = "insert-reading-time-container"
+
+  command = 'node scripts/countword.mjs'
